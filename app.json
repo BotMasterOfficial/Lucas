@@ -1,15 +1,15 @@
 {
-      "name": "YoneRobot",
+      "name": "Lucas",
       "description": "Telegram group management bot.",
       "keywords": [
          "telegram",
          "anime",
          "group",
          "manager",
-         "yone"
+         "lucas"
       ],
-   "logo": "https://telegra.ph/file/e75b8ff32e728d5780ee6.png", 
-   "repository": "https://github.com/BotMasterOfficial/YoneRobot",
+   "logo": "https://telegra.ph/file/82fbbbc712ddce12db05d.png", 
+   "repository": "https://github.com/BotMasterOfficial/Lucas",
    "addons": [
       {
          "options": {
