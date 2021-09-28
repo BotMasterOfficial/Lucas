@@ -19,13 +19,18 @@
 
 #
 
-# How to setup/deploy.
-For easiest way to deploy this Bot click on the below button
+<p align="center">𝐇𝐨𝐰 𝐓𝐨 𝐃𝐞𝐩𝐥𝐨𝐲</p>
+<p align="center">For easiest way to deploy this Bot click on the below button</p>
+
+#
+
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/BotMasterOfficial/Lucas"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
  
 #
 
-# Mᴀᴅᴇ Bʏ
+<p align="center">𝐌𝐚𝐝𝐞 𝐁𝐲</p>
+
+#
 
 <p align="center">
     <a href="https://t.me/mkspali"> <img src="https://img.shields.io/badge/Bestest-Master-ff69b4" /> </a>
@@ -35,7 +40,9 @@ For easiest way to deploy this Bot click on the below button
 
 #
 
-# Sᴜᴘᴘᴏʀᴛ
+<p align="center">𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩</p>
+
+#
 
 <p align="center">
     <a href="https://t.me/BotMasterOfficial"> <img src="https://img.shields.io/badge/Join-Our-green" /> <img src="https://img.shields.io/badge/Support-Group-critical" /> </a>
@@ -45,7 +52,9 @@ For easiest way to deploy this Bot click on the below button
 
 #
 
-# Sᴏᴜʀᴄᴇ
+<p align="center">𝐒𝐨𝐮𝐫𝐜𝐞𝐬</p>
+
+#
 
 <p align="center">
     <img src="https://img.shields.io/badge/Python-black" width=50px/>  <img src="https://img.shields.io/badge/Telethn-black" width=50px/>
@@ -53,13 +62,18 @@ For easiest way to deploy this Bot click on the below button
 
 #
 
-# Generate String Session
+<p align="center">𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧</p>
+
+#
 
 <p align="center"><a href="https://replit.com/@Aviyu/generatestringsession?v=1"> <img src="https://img.shields.io/badge/String%20Session-black?style=for-the-badge&logo=replit" width="220" height="38.45"/></a></p>
  
 #
 
-# Find YoneRobot on Telegram
+<p align="center">𝐅𝐢𝐧𝐝 𝐋𝐮𝐜𝐚𝐬 𝐎𝐧 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦</p>
+
+#
+
 <p align="center">
     <a href="https://t.me/LucasOfficialBot"><img src="https://img.shields.io/badge/Best-Bot-ff69b4" /></a>
     <a href="https://t.me/LucasOfficialBot"><img src="https://img.shields.io/badge/Telegram-Lucas-gold?&style=flat-square?&logo=telegram" width=600px></a></p>
@@ -67,7 +81,9 @@ For easiest way to deploy this Bot click on the below button
 
 #
 
-# A modular Telegram Python bot running on python3 with a sqlalchemy database.
+<p align="center">𝐀 𝐦𝐨𝐝𝐮𝐥𝐚𝐫 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐏𝐲𝐭𝐡𝐨𝐧 𝐛𝐨𝐭 𝐫𝐮𝐧𝐧𝐢𝐧𝐠 𝐨𝐧 𝐩𝐲𝐭𝐡𝐨𝐧𝟑 𝐰𝐢𝐭𝐡 𝐚 𝐬𝐪𝐥𝐚𝐥𝐜𝐡𝐞𝐦𝐲 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞.</p>
+
+#
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/BotMasterOfficial/Lucas.js/graphs/commit-activity) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://perso.crans.org/besson/LICENSE.html) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/BotMasterOfficial/Lucas/open-source-badges/) 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
