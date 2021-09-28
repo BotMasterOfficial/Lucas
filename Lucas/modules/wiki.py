@@ -1,6 +1,6 @@
 import wikipedia
-from YoneRobot import dispatcher
-from YoneRobot.modules.disable import DisableAbleCommandHandler
+from Lucas import dispatcher
+from Lucas.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 from wikipedia.exceptions import DisambiguationError, PageError
