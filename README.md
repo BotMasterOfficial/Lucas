@@ -1,6 +1,6 @@
 #
 
-<a href="https://github.com/BotMasterOfficial/Lucas"><img src="https://img.shields.io/badge/Lucas-gold?&style=for-the-badge&logo=github" width=600px></a></p>
+<p align="center"><a href="https://github.com/BotMasterOfficial/Lucas"><img src="https://img.shields.io/badge/Lucas-gold?&style=for-the-badge&logo=github" width=600px></a></p>
 
 #
 
