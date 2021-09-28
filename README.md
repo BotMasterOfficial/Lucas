@@ -47,7 +47,7 @@
 <p align="center">
     <a href="https://t.me/BotMasterOfficial"> <img src="https://img.shields.io/badge/Join-Our-green" /> <img src="https://img.shields.io/badge/Support-Group-critical" /> </a>
 </p>
-<a href="https://t.me/BotMasterOfficial"><img src="https://img.shields.io/badge/Telegram-Bot%20Master%20Official%20-gold?&style=flat-square?&logo=telegram" width=600px></a></p>
+<a href="https://t.me/BotMasterOfficial"><img src="https://img.shields.io/badge/Telegram-𝐁𝐨𝐭%20𝐌𝐚𝐬𝐭𝐞𝐫%20𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥%20-gold?&style=flat-square?&logo=telegram" width=600px></a></p>
 
 
 #
@@ -78,14 +78,5 @@
     <a href="https://t.me/LucasOfficialBot"><img src="https://img.shields.io/badge/Best-Bot-ff69b4" /></a>
     <a href="https://t.me/LucasOfficialBot"><img src="https://img.shields.io/badge/Telegram-𝐋𝐮𝐜𝐚𝐬-gold?&style=flat-square?&logo=telegram" width=600px></a></p>
 </p>
-
-#
-
-<p align="center">𝐀 𝐦𝐨𝐝𝐮𝐥𝐚𝐫 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐏𝐲𝐭𝐡𝐨𝐧 𝐛𝐨𝐭 𝐫𝐮𝐧𝐧𝐢𝐧𝐠 𝐨𝐧 𝐩𝐲𝐭𝐡𝐨𝐧𝟑 𝐰𝐢𝐭𝐡 𝐚 𝐬𝐪𝐥𝐚𝐥𝐜𝐡𝐞𝐦𝐲 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞.</p>
-
-#
-
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/BotMasterOfficial/Lucas.js/graphs/commit-activity) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://perso.crans.org/besson/LICENSE.html) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/BotMasterOfficial/Lucas/open-source-badges/) 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 
 #
