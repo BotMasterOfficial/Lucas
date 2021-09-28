@@ -1,15 +1,15 @@
-from YoneRobot import telethn as tbot
-from YoneRobot.events import register
+from Lucas import telethn as tbot
+from Lucas.events import register
 import os
 import asyncio
 import os
 import time
 from datetime import datetime
-from YoneRobot import OWNER_ID, DEV_USERS
-from YoneRobot import TEMP_DOWNLOAD_DIRECTORY as path
-from YoneRobot import TEMP_DOWNLOAD_DIRECTORY
+from Lucas import OWNER_ID, DEV_USERS
+from Lucas import TEMP_DOWNLOAD_DIRECTORY as path
+from Lucas import TEMP_DOWNLOAD_DIRECTORY
 from datetime import datetime
-water = './YoneRobot/resources/yone.jpg'
+water = './Lucas/resources/Lucas.jpg'
 client = tbot
 
 @register(pattern=r"^/send ?(.*)")
@@ -21,7 +21,7 @@ async def Prof(event):
     thumb = water
     message_id = event.message.id
     input_str = event.pattern_match.group(1)
-    the_plugin_file = "./YoneRobot/modules/{}.py".format(input_str)
+    the_plugin_file = "./Lucas/modules/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
      message_id = event.message.id
      await event.client.send_file(
@@ -36,7 +36,7 @@ async def Prof(event):
         await event.reply("No File Found!")
 
 
-from YoneRobot.events import load_module
+from Lucas.events import load_module
 import asyncio
 import os
 from datetime import datetime
@@ -55,7 +55,7 @@ async def install(event):
             downloaded_file_name = (
                 await event.client.download_media(  # pylint:disable=E0602
                     await event.get_reply_message(),
-                    "YoneRobot/modules/",  # pylint:disable=E0602
+                    "Lucas/modules/",  # pylint:disable=E0602
                 )
             )
             if "(" not in downloaded_file_name:
