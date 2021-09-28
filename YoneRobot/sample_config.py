@@ -14,9 +14,9 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = 5618399  # integer value, dont use ""
-    API_HASH = "372f9b12937f0c2a9f0dcec966add011"
-    TOKEN = "2034299246:AAFPfrIoV1i2dgKsEk0QmGNXLCLLZY20Z10"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    API_ID = 123456  # integer value, dont use ""
+    API_HASH = ""
+    TOKEN = ""  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
     OWNER_ID = 412094015  # If you dont know, run the bot and do /id in your private chat with it, also an integer
     OWNER_USERNAME = "mkspali"
     SUPPORT_CHAT = "BotMasterOfficial"  # Your own group for support, do not add the @
@@ -34,7 +34,7 @@ class Config(object):
     WEBHOOK = False
     INFOPIC = True
     URL = None
-    SPAMWATCH_API = "4tA8_mJUxa2s2wsffaN_xhzy1bDNFAFkVfvBLBCCfEAkS2VDeQhgadgo28RiAS6i"  # go to support.spamwat.ch to get key
+    SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
 
     # OPTIONAL
