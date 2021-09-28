@@ -1,4 +1,4 @@
-from YoneRobot import LOAD, LOGGER, NO_LOAD
+from Lucas import LOAD, LOGGER, NO_LOAD
 
 
 def __list_all_modules():
