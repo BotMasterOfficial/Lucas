@@ -1,6 +1,6 @@
 #
 
-<a href="https://github.com/BotMasterOfficial/YoneRobot"><img src="https://img.shields.io/badge/YoneRobot-gold?&style=flat-square?&logo=github" width=600px></a></p>
+<a href="https://github.com/BotMasterOfficial/YoneRobot"><img src="https://img.shields.io/badge/YoneRobot-gold?&style=for-the-badge&logo=github" width=600px></a></p>
 
 #
 
@@ -32,7 +32,7 @@ For easiest way to deploy this Bot click on the below button
 <p align="center">
     <a href="https://t.me/mkspali"> <img src="https://img.shields.io/badge/Bestest-Master-ff69b4" /> </a>
 </p>
-<a href="https://t.me/mkspali"><img src="https://img.shields.io/badge/Telegram-Mukesh%20Solanki-gold?&style=flat-square?&logo=telegram" width=600px></a></p>
+<a href="https://t.me/mkspali"><img src="https://img.shields.io/badge/Telegram-Mukesh%20Solanki-gold?&style=for-the-badge&logo=telegram" width=600px></a></p>
 
 
 ##
