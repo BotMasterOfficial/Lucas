@@ -12,7 +12,7 @@ from pyrogram import Client
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Chat, Message, User
 
-from Lucas  import OWNER_ID, SUPPORT_CHAT
+from Lucas import OWNER_ID, SUPPORT_CHAT
 from Lucas import pbot
 
 
