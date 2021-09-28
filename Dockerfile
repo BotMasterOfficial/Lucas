@@ -1,4 +1,4 @@
-# We're using Debian Slim Buster image
+# We're using Lucas image
 FROM python:3.8.5-slim-buster
 
 ENV PIP_NO_CACHE_DIR 1
@@ -64,12 +64,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/YoneRobot
-RUN git clone -b shiken https://github.com/BotMasterOfficial/YoneRobot /root/YoneRobot
-WORKDIR /root/YoneRobot
+# Copy Python Requirements to /root/Lucas
+RUN git clone -b shiken https://github.com/BotMasterOfficial/Lucas /root/Lucas
+WORKDIR /root/Lucas
 
-#Copy config file to /root/YoneRobot/YoneRobot
-COPY ./YoneRobot/sample_config.py ./YoneRobot/config.py* /root/YoneRobot/YoneRobot/
+#Copy config file to /root/Lucas/Lucas
+COPY ./Lucas/sample_config.py ./Lucas/config.py* /root/Lucas/Lucas/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","YoneRobot"]
+CMD ["python3","-m","Lucas"]
