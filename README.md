@@ -35,7 +35,7 @@
 <p align="center">
     <a href="https://t.me/mkspali"> <img src="https://img.shields.io/badge/Bestest-Master-ff69b4" /> </a>
 </p>
-<a href="https://t.me/mkspali"><img src="https://img.shields.io/badge/Telegram-𝐌𝐮𝐤𝐞𝐬𝐡%20𝐒𝐨𝐥𝐚𝐧𝐤𝐢-gold?&style=for-the-badge&logo=telegram" width=600px></a></p>
+<a href="https://t.me/mkspali"><img src="https://img.shields.io/badge/Telegram-𝕸𝖚𝖐𝖊𝖘𝖍%20𝕾𝖔𝖑𝖆𝖓𝖐𝖎-gold?&style=for-the-badge&logo=telegram" width=600px></a></p>
 
 
 #
