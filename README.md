@@ -4,6 +4,10 @@
 
 #
 
+<p align="center"><a href="https://github.com/BotMasterOfficial/Lucas"><img src="https://telegra.ph/file/8db76d7aa4f2aee630167.jpg"></a></p>
+
+#
+
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=BotMasterOfficial&repo=Lucas&theme=dark)
 
 #
