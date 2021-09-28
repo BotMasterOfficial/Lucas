@@ -1,5 +1,5 @@
 #     (A Telegram Bot Project)
-#    Copyright (C) 2019-Present Anonymous (https://t.me/MissJulia_Robot)
+#    Copyright (C) 2019-Present Anonymous (https://t.me/LucasOfficialBot)
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -20,9 +20,9 @@ import dateparser
 from telethon import *
 from telethon.tl.types import ChatBannedRights
 
-from YoneRobot.events import register
-from YoneRobot.mongo import db
-from YoneRobot import telethn as tbot
+from Lucas.events import register
+from Lucas.mongo import db
+from Lucas import telethn as tbot
 
 nightmod = db.nightmode
 
