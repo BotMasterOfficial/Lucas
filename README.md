@@ -61,7 +61,7 @@ For easiest way to deploy this Bot click on the below button
 
 # Find YoneRobot on Telegram
 <p align="center">
-    <a href="https://t.me/LucasOfficialBot"> <img src="https://img.shields.io/badge/Best-Bot-ff69b4" /> </a>
+    <a href="https://t.me/LucasOfficialBot"><img src="https://img.shields.io/badge/Best-Bot-ff69b4" /></a>
     <a href="https://t.me/LucasOfficialBot"><img src="https://img.shields.io/badge/Telegram-Lucas-gold?&style=flat-square?&logo=telegram" width=600px></a></p>
 </p>
 
