@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/BotMasterOfficial/Lucas"><img src="https://img.shields.io/badge/Lucas-gold?&style=for-the-badge&logo=github" width=600px></a></p>
+<p align="center"><a href="https://github.com/BotMasterOfficial/Lucas"><img src="https://img.shields.io/badge/𝐋𝐮𝐜𝐚𝐬-gold?&style=flat-square?&logo=github" width=600px></a></p>
 
 #
 
@@ -35,7 +35,7 @@
 <p align="center">
     <a href="https://t.me/mkspali"> <img src="https://img.shields.io/badge/Bestest-Master-ff69b4" /> </a>
 </p>
-<a href="https://t.me/mkspali"><img src="https://img.shields.io/badge/Telegram-Mukesh%20Solanki-gold?&style=for-the-badge&logo=telegram" width=600px></a></p>
+<a href="https://t.me/mkspali"><img src="https://img.shields.io/badge/Telegram-𝐌𝐮𝐤𝐞𝐬𝐡%20𝐒𝐨𝐥𝐚𝐧𝐤𝐢-gold?&style=for-the-badge&logo=telegram" width=600px></a></p>
 
 
 #
@@ -57,7 +57,7 @@
 #
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Python-black" width=50px/>  <img src="https://img.shields.io/badge/Telethn-black" width=50px/>
+    <img src="https://img.shields.io/badge/Python-black" width=50px/>   <img src="https://img.shields.io/badge/Telethn-black" width=50px/>
 </p>
 
 #
@@ -76,7 +76,7 @@
 
 <p align="center">
     <a href="https://t.me/LucasOfficialBot"><img src="https://img.shields.io/badge/Best-Bot-ff69b4" /></a>
-    <a href="https://t.me/LucasOfficialBot"><img src="https://img.shields.io/badge/Telegram-Lucas-gold?&style=flat-square?&logo=telegram" width=600px></a></p>
+    <a href="https://t.me/LucasOfficialBot"><img src="https://img.shields.io/badge/Telegram-𝐋𝐮𝐜𝐚𝐬-gold?&style=flat-square?&logo=telegram" width=600px></a></p>
 </p>
 
 #
