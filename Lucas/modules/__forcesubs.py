@@ -1,4 +1,4 @@
-# credits @InukaAsith, @Mr_dark_prince
+# credits @mkspali
 
 import logging
 import time
@@ -12,9 +12,9 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from YoneRobot import DRAGONS as SUDO_USERS
-from YoneRobot import pbot
-from YoneRobot.modules.sql_extended import forceSubscribe_sql as sql
+from Lucas import DRAGONS as SUDO_USERS
+from Lucas import pbot
+from Lucas.modules.sql_extended import forceSubscribe_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 
@@ -181,12 +181,12 @@ def config(client, message):
 
 __help__ = """
 *Force Subscribe:*
-❍ Yone can mute members who are not subscribed your channel until they subscribe
-❍ When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
+⚫ Lucas can mute members who are not subscribed your channel until they subscribe
+⚫ When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
 *Setup*
 *Only creator*
-❍ Add me in your group as admin
-❍ Add me in your channel as admin 
+⚫ Add me in your group as admin
+⚫ Add me in your channel as admin 
  
 *Commmands*
  ❍ /fsub {channel username} - To turn on and setup the channel.
