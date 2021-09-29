@@ -12,7 +12,7 @@
 <a href="https://github.com/BotMasterOfficial/Lucas/issues"><img src="https://img.shields.io/github/issues/BotMasterOfficial/Lucas?style=social&logo=github" />
 <a href="https://perso.crans.org/besson/LICENSE.html"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=social&logo=github" />
 <a href="https://app.codacy.com/manual/BotMasterOfficial/Marie/dashboard"><img src="https://img.shields.io/codacy/grade/d1726ee34f964a9a9b1ac509c6d90729?color=gold&logo=github&style=social" />
-<a href="https://github.com/BotMasterOfficial/Lucas/"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=social&logo=github" />
+<a href="https://github.com/BotMasterOfficial/Lucas/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=social&logo=github" />
 <a href="https://GitHub.com/BotMasterOfficial/Lucas/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained-yes-green.svg?style=social&logo=github" />
 </p>
 
