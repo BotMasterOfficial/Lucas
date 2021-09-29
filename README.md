@@ -7,6 +7,7 @@
     <a href="https://github.com/BotMasterOfficial/Lucas/stargazers"><img src="https://img.shields.io/github/stars/BotMasterOfficial/Lucas?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
 </p>
 <p align="center">
+    <a href="https://deepsource.io/gh/pokurt/Lucas/?ref=repository-badge"><img src="https://static.deepsource.io/deepsource-badge-light-mini.svg">
     <a href="https://app.codacy.com/manual/BotMasterOfficial/Lucas/dashboard"> <img src="https://img.shields.io/codacy/grade/4d58f2a402b54aed8a7d95f7add45a81?color=brightgreen&logo=codacy&logoColor=green&style=for-the-badge" alt="Codacy" /></a>
     <a href="https://github.com/BotMasterOfficial/Lucas"> <img src="https://img.shields.io/github/repo-size/BotMasterOfficial/Lucas?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
     <a href="https://github.com/BotMasterOfficial/Lucas/commits/mukesh"> <img src="https://img.shields.io/github/last-commit/BotMasterOfficial/Lucas?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
