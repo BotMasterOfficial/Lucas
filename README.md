@@ -8,7 +8,7 @@
 </p>
 <p align="center"><a href="https://deepsource.io/gh/pokurt/Lucas/?ref=repository-badge"><img src="https://static.deepsource.io/deepsource-badge-light-mini.svg" width=500px /></a></p>
 <p align="center">    
-    <a href="https://www.codacy.com/gh/BotMasterOfficial/Lucas/dashboard"><img src="https://img.shields.io/codacy/grade/d1726ee34f964a9a9b1ac509c6d90729?color=brightgreen&logo=codacy&logoColor=green&style=for-the-badge" alt="Codacy" /></a>
+    <a href="https://www.codacy.com/gh/BotMasterOfficial/Lucas/dashboard"><img src="https://img.shields.io/codacy/grade/d1726ee34f964a9a9b1ac509c6d90729?color=gold&logo=codacy&logoColor=gold&style=for-the-badge" alt="Codacy" /></a>
     <a href="https://github.com/BotMasterOfficial/Lucas"> <img src="https://img.shields.io/github/repo-size/BotMasterOfficial/Lucas?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
     <a href="https://github.com/BotMasterOfficial/Lucas/commits/mukesh"> <img src="https://img.shields.io/github/last-commit/BotMasterOfficial/Lucas?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
     <a href="https://github.com/BotMasterOfficial/Lucas/issues"> <img src="https://img.shields.io/github/issues/BotMasterOfficial/Lucas?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
