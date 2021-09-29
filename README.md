@@ -7,19 +7,18 @@
 <img src="https://img.shields.io/github/forks/BotMasterOfficial/Lucas?style=social" />
 <img src="https://img.shields.io/github/stars/BotMasterOfficial/Lucas?style=social" />
 <img src="https://img.shields.io/github/watchers/BotMasterOfficial/Lucas?style=social" />
+<img src="https://img.shields.io/github/repo-size/BotMasterOfficial/Lucas?style=social" />
+<img src="https://img.shields.io/github/last-commit/BotMasterOfficial/Lucas?style=social" />
+<img src="https://img.shields.io/github/issues/BotMasterOfficial/Lucas?style=social" />
+<img src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=social" />
+<img src="https://img.shields.io/codacy/grade/d1726ee34f964a9a9b1ac509c6d90729?color=gold&logo=codacy&logoColor=gold&style=social" alt="Codacy" />
+<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=social" />
+    <img src="https://img.shields.io/badge/Maintained-yes-green.svg?style=social" />
 </p>
+
 <p align="center"><a href="https://deepsource.io/gh/pokurt/Lucas/?ref=repository-badge"><img src="https://static.deepsource.io/deepsource-badge-light-mini.svg" width=500px /></a></p>
 <p align="center"><img src="https://github-readme-stats.vercel.app/api/pin/?username=BotMasterOfficial&repo=Lucas&theme=dark" /></a></p>
-<p align="center">    
-    <a href="https://www.codacy.com/gh/BotMasterOfficial/Lucas/dashboard"><img src="https://img.shields.io/codacy/grade/d1726ee34f964a9a9b1ac509c6d90729?color=gold&logo=codacy&logoColor=gold&style=for-the-badge" alt="Codacy" /></a>
-    <a href="https://github.com/BotMasterOfficial/Lucas"> <img src="https://img.shields.io/github/repo-size/BotMasterOfficial/Lucas?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/BotMasterOfficial/Lucas/commits/mukesh"> <img src="https://img.shields.io/github/last-commit/BotMasterOfficial/Lucas?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/BotMasterOfficial/Lucas/issues"> <img src="https://img.shields.io/github/issues/BotMasterOfficial/Lucas?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/BotMasterOfficial/Lucas/network/members"> <img src="https://img.shields.io/github/forks/BotMasterOfficial/Lucas?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
-    <a href="https://perso.crans.org/besson/LICENSE.html"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" /></a>
-    <a href="https://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" /></a>
-    <a href="https://GitHub.com/BotMasterOfficial/Lucas.js/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /></a>
-    <a href="https://github.com/BotMasterOfficial/Lucas/"><img src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103" /></a>
+<p align="center"><a href="https://github.com/BotMasterOfficial/Lucas/"><img src="https://badges.frapsoft.com/os/v2/open-source.svg?style=social" />
 </p>
 
 #
