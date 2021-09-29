@@ -4,7 +4,9 @@
 #
 
 <p align="center">
-    <a href="https://github.com/BotMasterOfficial/Lucas/stargazers"><img src="https://img.shields.io/github/stars/BotMasterOfficial/Lucas?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
+<img src="https://img.shields.io/github/forks/BotMasterOfficial/Lucas?style=social" />
+<img src="https://img.shields.io/github/stars/BotMasterOfficial/Lucas?style=social" />
+<img src="https://img.shields.io/github/watchers/BotMasterOfficial/Lucas?style=social" />
 </p>
 <p align="center"><a href="https://deepsource.io/gh/pokurt/Lucas/?ref=repository-badge"><img src="https://static.deepsource.io/deepsource-badge-light-mini.svg" width=500px /></a></p>
 <p align="center"><img src="https://github-readme-stats.vercel.app/api/pin/?username=BotMasterOfficial&repo=Lucas&theme=dark" /></a></p>
