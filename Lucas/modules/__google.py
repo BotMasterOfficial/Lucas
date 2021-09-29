@@ -275,17 +275,17 @@ async def apk(e):
         await e.reply("Exception Occured:- " + str(err))
 
 
-__mod_name__ = "◎Search"
+__mod_name__ = "🔍𝐒𝐞𝐚𝐫𝐜𝐡🔎"
 
 __help__ = """
- ❍ /google <text>*:* Perform a google search
- ❍ /img <text>*:* Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
- ❍ /app <appname>*:* Searches for an app in Play Store and returns its details.
- ❍ /reverse: Does a reverse image search of the media which it was replied to.
- ❍ /gps <location>*:* Get gps location.
- ❍ /github <username>*:* Get information about a GitHub user.
- ❍ /country <country name>*:* Gathering info about given country
- ❍ /imdb <Movie name>*:* Get full info about a movie with imdb.com
- ❍ Lucas <query>*:* Lucas answers the query
-  💡Ex: `Lucas where is India?`
+ ❍ /google <𝐭𝐞𝐱𝐭>*:* 𝐏𝐞𝐫𝐟𝐨𝐫𝐦 𝐚 𝐠𝐨𝐨𝐠𝐥𝐞 𝐬𝐞𝐚𝐫𝐜𝐡
+ ❍ /img <𝐭𝐞𝐱𝐭>*:* 𝐒𝐞𝐚𝐫𝐜𝐡 𝐆𝐨𝐨𝐠𝐥𝐞 𝐟𝐨𝐫 𝐢𝐦𝐚𝐠𝐞𝐬 𝐚𝐧𝐝 𝐫𝐞𝐭𝐮𝐫𝐧𝐬 𝐭𝐡𝐞𝐦\n𝐅𝐨𝐫 𝐠𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐨. 𝐨𝐟 𝐫𝐞𝐬𝐮𝐥𝐭𝐬 𝐬𝐩𝐞𝐜𝐢𝐟𝐲 𝐥𝐢𝐦, 𝐅𝐨𝐫 𝐞𝐠: `/img 𝐡𝐞𝐥𝐥𝐨 𝐥𝐢𝐦=𝟏𝟎`
+ ❍ /app <𝐚𝐩𝐩𝐧𝐚𝐦𝐞>*:* 𝐒𝐞𝐚𝐫𝐜𝐡𝐞𝐬 𝐟𝐨𝐫 𝐚𝐧 𝐚𝐩𝐩 𝐢𝐧 𝐏𝐥𝐚𝐲 𝐒𝐭𝐨𝐫𝐞 𝐚𝐧𝐝 𝐫𝐞𝐭𝐮𝐫𝐧𝐬 𝐢𝐭𝐬 𝐝𝐞𝐭𝐚𝐢𝐥𝐬.
+ ❍ /reverse: 𝐃𝐨𝐞𝐬 𝐚 𝐫𝐞𝐯𝐞𝐫𝐬𝐞 𝐢𝐦𝐚𝐠𝐞 𝐬𝐞𝐚𝐫𝐜𝐡 𝐨𝐟 𝐭𝐡𝐞 𝐦𝐞𝐝𝐢𝐚 𝐰𝐡𝐢𝐜𝐡 𝐢𝐭 𝐰𝐚𝐬 𝐫𝐞𝐩𝐥𝐢𝐞𝐝 𝐭𝐨.
+ ❍ /gps <𝐥𝐨𝐜𝐚𝐭𝐢𝐨𝐧>*:* 𝐆𝐞𝐭 𝐠𝐩𝐬 𝐥𝐨𝐜𝐚𝐭𝐢𝐨𝐧.
+ ❍ /github <𝐮𝐬𝐞𝐫𝐧𝐚𝐦𝐞>*:* 𝐆𝐞𝐭 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐛𝐨𝐮𝐭 𝐚 𝐆𝐢𝐭𝐇𝐮𝐛 𝐮𝐬𝐞𝐫.
+ ❍ /country <𝐜𝐨𝐮𝐧𝐭𝐫𝐲 𝐧𝐚𝐦𝐞>*:* 𝐆𝐚𝐭𝐡𝐞𝐫𝐢𝐧𝐠 𝐢𝐧𝐟𝐨 𝐚𝐛𝐨𝐮𝐭 𝐠𝐢𝐯𝐞𝐧 𝐜𝐨𝐮𝐧𝐭𝐫𝐲
+ ❍ /imdb <𝐌𝐨𝐯𝐢𝐞 𝐧𝐚𝐦𝐞>*:* 𝐆𝐞𝐭 𝐟𝐮𝐥𝐥 𝐢𝐧𝐟𝐨 𝐚𝐛𝐨𝐮𝐭 𝐚 𝐦𝐨𝐯𝐢𝐞 𝐰𝐢𝐭𝐡 𝐢𝐦𝐝𝐛.𝐜𝐨𝐦
+ ❍ 𝐋𝐮𝐜𝐚𝐬 <𝐪𝐮𝐞𝐫𝐲>*:* 𝐋𝐮𝐜𝐚𝐬 𝐚𝐧𝐬𝐰𝐞𝐫𝐬 𝐭𝐡𝐞 𝐪𝐮𝐞𝐫𝐲
+  💡𝐄𝐱: `𝐋𝐮𝐜𝐚𝐬 𝐰𝐡𝐞𝐫𝐞 𝐢𝐬 𝐈𝐧𝐝𝐢𝐚?`
 """
