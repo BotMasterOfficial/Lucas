@@ -15,7 +15,7 @@ def ud(update: Update, context: CallbackContext):
     try:
         reply_text = f'*{text}*\n\n{results["list"][0]["definition"]}\n\n_{results["list"][0]["example"]}_'
     except:
-        reply_text = "No results found."
+        reply_text = "𝐍𝐨 𝐫𝐞𝐬𝐮𝐥𝐭𝐬 𝐟𝐨𝐮𝐧𝐝."
     message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN)
 
 
