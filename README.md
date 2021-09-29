@@ -11,7 +11,7 @@
 <img src="https://img.shields.io/github/last-commit/BotMasterOfficial/Lucas?style=social&logo=github" />
 <img src="https://img.shields.io/github/issues/BotMasterOfficial/Lucas?style=social&logo=github" />
 <img src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=social&logo=github" />
-<img src="https://img.shields.io/codacy/grade/d1726ee34f964a9a9b1ac509c6d90729?color=gold&logo=github&style=social" alt="Codacy" />
+<img src="https://img.shields.io/codacy/grade/d1726ee34f964a9a9b1ac509c6d90729?color=gold&logo=github&style=social" />
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=social&logo=github" />
     <img src="https://img.shields.io/badge/Maintained-yes-green.svg?style=social&logo=github" />
 </p>
