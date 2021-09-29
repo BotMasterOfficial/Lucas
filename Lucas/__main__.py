@@ -74,43 +74,44 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-ʜᴇʟʟᴏ [🤗](https://telegra.ph/file/8db76d7aa4f2aee630167.jpg),
+𝐇𝐞𝐥𝐥𝐨 {},
 
-⚫ ɪᴍ Lucas ᴀ ʜɪɢʜʏ ᴀᴅᴠᴀɴᴄᴇᴅ ʙᴏᴛ ᴡɪᴛʜ ʟᴏᴛꜱ ᴏꜰ ᴀᴍᴀᴢɪɴɢ ᴛᴏᴏʟꜱ.
+⚫ 𝐈 𝐚𝐦 𝐋𝐮𝐜𝐚𝐬, 𝐇𝐢𝐠𝐡𝐥𝐲 𝐚𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐥𝐨𝐭𝐬 𝐨𝐟 𝐚𝐦𝐚𝐳𝐢𝐧𝐠 𝐭𝐨𝐨𝐥𝐬
 
-⚫`ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ!
+⚫ 𝐈 𝐚𝐦 𝐡𝐞𝐫𝐞 𝐭𝐨 𝐡𝐞𝐥𝐩 𝐲𝐨𝐮 𝐌𝐚𝐧𝐚𝐠𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐠𝐫𝐨𝐮𝐩𝐬
 
-⚫ʜɪᴛ` /help   
+⚫ 𝐇𝐢𝐭 /help   
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ʏᴏɴᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/LucasOfficialBot?startgroup=true"),
+            text="➕️ 𝐀𝐃𝐃 𝐋𝐔𝐂𝐀𝐒 𝐓𝐎 𝐆𝐑𝐎𝐔𝐏 ➕️", url="t.me/LucasOfficialBot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="lucas_"),
+        InlineKeyboardButton(text="💠𝐀𝐁𝐎𝐔𝐓💠", callback_data="lucas_"),
         InlineKeyboardButton(
-            text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
+            text="🫂𝐒𝐔𝐏𝐏𝐎𝐑𝐓🫂", url=f"https://t.me/{SUPPORT_CHAT}"
         ),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),
+        InlineKeyboardButton(text="🆘𝐇𝐄𝐋𝐏 & 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒🆘", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
-`Hello ɪ am Lucas [🙋‍♀️](https://telegra.ph/file/8db76d7aa4f2aee630167.jpg) 
-`ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`"""
+`𝐇𝐞𝐥𝐥𝐨 {},𝐈 𝐚𝐦 𝐋𝐮𝐜𝐚𝐬 [🙋‍♀️](https://telegra.ph/file/8db76d7aa4f2aee630167.jpg) 
+`𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐓𝐡𝐞 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐁𝐞𝐥𝐨𝐰 𝐓𝐨 𝐆𝐞𝐭 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧 𝐀𝐛𝐨𝐮𝐭 𝐒𝐩𝐞𝐜𝐢𝐟𝐢𝐜 𝐌𝐨𝐝𝐮𝐥𝐞𝐬 ....`"""
 
 lucas_IMG = "https://telegra.ph/file/8db76d7aa4f2aee630167.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @mkspali \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """𝐇𝐞𝐲𝐚, 𝐠𝐥𝐚𝐝 𝐭𝐨 𝐡𝐞𝐚𝐫 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐝𝐨𝐧𝐚𝐭𝐞!
+ 𝐘𝐨𝐮 𝐜𝐚𝐧 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 𝐭𝐡𝐞 𝐩𝐫𝐨𝐣𝐞𝐜𝐭 𝐛𝐲 𝐜𝐨𝐧𝐭𝐚𝐜𝐭𝐢𝐧𝐠 @mkspali \
+ 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐢𝐧𝐠 𝐢𝐬 𝐧𝐨𝐭 𝐚𝐥𝐰𝐚𝐲𝐬 𝐟𝐢𝐧𝐚𝐧𝐜𝐢𝐚𝐥! \
+ 𝐓𝐡𝐨𝐬𝐞 𝐰𝐡𝐨 𝐜𝐚𝐧𝐧𝐨𝐭 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐦𝐨𝐧𝐞𝐭𝐚𝐫𝐲 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 𝐚𝐫𝐞 𝐰𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐡𝐞𝐥𝐩 𝐮𝐬 𝐝𝐞𝐯𝐞𝐥𝐨𝐩 𝐭𝐡𝐞 𝐛𝐨𝐭 𝐚𝐭 ."""
 
+TECHNO_IMG = "https://telegra.ph/file/8db76d7aa4f2aee630167.jpg"
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
