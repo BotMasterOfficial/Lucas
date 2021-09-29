@@ -53,11 +53,11 @@ async def _(event):
             title = gresults["titles"][i]
             link = gresults["links"][i]
             desc = gresults["descriptions"][i]
-            msg += f"❍[{title}]({link})\n**{desc}**\n\n"
+            msg += f"⚫[{title}]({link})\n**{desc}**\n\n"
         except IndexError:
             break
     await webevent.edit(
-        "**Search Query:**\n`" + match + "`\n\n**Results:**\n" + msg, link_preview=False
+        "**𝐒𝐞𝐚𝐫𝐜𝐡 𝐐𝐮𝐞𝐫𝐲 :**\n`" + match + "`\n\n**Results:**\n" + msg, link_preview=False
     )
 
 @register(pattern="^/img (.*)")
