@@ -42,13 +42,13 @@ def _onUnMuteRequest(client, cb):
                 except UserNotParticipant:
                     client.answer_callback_query(
                         cb.id,
-                        text=f"❗ Join our @{channel} channel and press 'UnMute Me' button.",
+                        text=f"❗ 𝐉𝐨𝐢𝐧 𝐨𝐮𝐫 @{channel} 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐚𝐧𝐝 𝐩𝐫𝐞𝐬𝐬 '𝐔𝐧𝐌𝐮𝐭𝐞 𝐌𝐞' 𝐛𝐮𝐭𝐭𝐨𝐧.",
                         show_alert=True,
                     )
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ You have been muted by admins due to some other reason.",
+                    text="❗ 𝐘𝐨𝐮 𝐡𝐚𝐯𝐞 𝐛𝐞𝐞𝐧 𝐦𝐮𝐭𝐞𝐝 𝐛𝐲 𝐚𝐝𝐦𝐢𝐧𝐬 𝐝𝐮𝐞 𝐭𝐨 𝐬𝐨𝐦𝐞 𝐨𝐭𝐡𝐞𝐫 𝐫𝐞𝐚𝐬𝐨𝐧.",
                     show_alert=True,
                 )
         else:
@@ -58,13 +58,13 @@ def _onUnMuteRequest(client, cb):
             ):
                 client.send_message(
                     chat_id,
-                    f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__",
+                    f"❗ **{cb.from_user.mention} 𝐢𝐬 𝐭𝐫𝐲𝐢𝐧𝐠 𝐭𝐨 𝐔𝐧𝐌𝐮𝐭𝐞 𝐡𝐢𝐦𝐬𝐞𝐥𝐟 𝐛𝐮𝐭 𝐢 𝐜𝐚𝐧'𝐭 𝐮𝐧𝐦𝐮𝐭𝐞 𝐡𝐢𝐦 𝐛𝐞𝐜𝐚𝐮𝐬𝐞 𝐢 𝐚𝐦 𝐧𝐨𝐭 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭 𝐚𝐝𝐝 𝐦𝐞 𝐚𝐬 𝐚𝐝𝐦𝐢𝐧 𝐚𝐠𝐚𝐢𝐧.**\n__#𝐋𝐞𝐚𝐯𝐢𝐧𝐠 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭...__",
                 )
 
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ Warning! Don't press the button when you cn talk.",
+                    text="❗ 𝐖𝐚𝐫𝐧𝐢𝐧𝐠! 𝐃𝐨𝐧'𝐭 𝐩𝐫𝐞𝐬𝐬 𝐭𝐡𝐞 𝐛𝐮𝐭𝐭𝐨𝐧 𝐰𝐡𝐞𝐧 𝐲𝐨𝐮 𝐜𝐚𝐧 𝐭𝐚𝐥𝐤.",
                     show_alert=True,
                 )
 
@@ -86,7 +86,7 @@ def _check_member(client, message):
             except UserNotParticipant:
                 try:
                     sent_message = message.reply_text(
-                        "Welcome {} 🙏 \n **You havent joined our @{} Channel yet** 😭 \n \nPlease Join [Our Channel](https://t.me/{}) and hit the **UNMUTE ME** Button. \n \n ".format(
+                        "𝐖𝐞𝐥𝐜𝐨𝐦𝐞 {} 🙏 \n **𝐘𝐨𝐮 𝐡𝐚𝐯𝐞𝐧'𝐭 𝐣𝐨𝐢𝐧𝐞𝐝 𝐨𝐮𝐫 @{} 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐲𝐞𝐭** 😭 \n \n𝐏𝐥𝐞𝐚𝐬𝐞 𝐉𝐨𝐢𝐧 [𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥](https://t.me/{}) 𝐚𝐧𝐝 𝐡𝐢𝐭 𝐭𝐡𝐞 **𝐔𝐍𝐌𝐔𝐓𝐄 𝐌𝐄** 𝐁𝐮𝐭𝐭𝐨𝐧. \n \n ".format(
                             message.from_user.mention, channel, channel
                         ),
                         disable_web_page_preview=True,
@@ -94,13 +94,13 @@ def _check_member(client, message):
                             [
                                 [
                                     InlineKeyboardButton(
-                                        "Join Channel",
+                                        "🔰𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🔰",
                                         url="https://t.me/{}".format(channel),
                                     )
                                 ],
                                 [
                                     InlineKeyboardButton(
-                                        "UnMute Me", callback_data="onUnMuteRequest"
+                                        "🔊𝐔𝐧𝐌𝐮𝐭𝐞 𝐌𝐞🔊", callback_data="onUnMuteRequest"
                                     )
                                 ],
                             ]
@@ -111,13 +111,13 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "❗ **Daisy is not admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
+                        "❗ **𝐋𝐮𝐜𝐚𝐬 𝐢𝐬 𝐧𝐨𝐭 𝐚𝐝𝐦𝐢𝐧 𝐡𝐞𝐫𝐞..**\n__𝐆𝐢𝐯𝐞 𝐦𝐞 𝐛𝐚𝐧 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧𝐬 𝐚𝐧𝐝 𝐫𝐞𝐭𝐫𝐲..\n#𝐄𝐧𝐝𝐢𝐧𝐠 𝐅𝐒𝐮𝐛...__"
                     )
 
             except ChatAdminRequired:
                 client.send_message(
                     chat_id,
-                    text=f"❗ **I not an admin of @{channel} channel.**\n__Give me admin of that channel and retry.\n#Ending FSub...__",
+                    text=f"❗ **𝐈 𝐧𝐨𝐭 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧 𝐨𝐟 @{channel} 𝐜𝐡𝐚𝐧𝐧𝐞𝐥.**\n__𝐆𝐢𝐯𝐞 𝐦𝐞 𝐚𝐝𝐦𝐢𝐧 𝐨𝐟 𝐭𝐡𝐚𝐭 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐚𝐧𝐝 𝐫𝐞𝐭𝐫𝐲.\n#𝐄𝐧𝐝𝐢𝐧𝐠 𝐅𝐒𝐮𝐛...__",
                 )
 
 
@@ -131,10 +131,10 @@ def config(client, message):
             input_str = input_str.replace("@", "")
             if input_str.lower() in ("off", "no", "disable"):
                 sql.disapprove(chat_id)
-                message.reply_text("❌ **Force Subscribe is Disabled Successfully.**")
+                message.reply_text("❌ **𝐅𝐨𝐫𝐜𝐞 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐢𝐬 𝐃𝐢𝐬𝐚𝐛𝐥𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲.**")
             elif input_str.lower() in ("clear"):
                 sent_message = message.reply_text(
-                    "**Unmuting all members who are muted by me...**"
+                    "**𝐔𝐧𝐦𝐮𝐭𝐢𝐧𝐠 𝐚𝐥𝐥 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐰𝐡𝐨 𝐚𝐫𝐞 𝐦𝐮𝐭𝐞𝐝 𝐛𝐲 𝐦𝐞...**"
                 )
                 try:
                     for chat_member in client.get_chat_members(
@@ -143,57 +143,58 @@ def config(client, message):
                         if chat_member.restricted_by.id == (client.get_me()).id:
                             client.unban_chat_member(chat_id, chat_member.user.id)
                             time.sleep(1)
-                    sent_message.edit("✅ **UnMuted all members who are muted by me.**")
+                    sent_message.edit("✅ **𝐔𝐧𝐌𝐮𝐭𝐞𝐝 𝐚𝐥𝐥 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐰𝐡𝐨 𝐚𝐫𝐞 𝐦𝐮𝐭𝐞𝐝 𝐛𝐲 𝐦𝐞.**")
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "❗ **I am not an admin in this chat.**\n__I can't unmute members because i am not an admin in this chat make me admin with ban user permission.__"
+                        "❗ **𝐈 𝐚𝐦 𝐧𝐨𝐭 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭.**\n__𝐈 𝐜𝐚𝐧'𝐭 𝐮𝐧𝐦𝐮𝐭𝐞 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐛𝐞𝐜𝐚𝐮𝐬𝐞 𝐈 𝐚𝐦 𝐧𝐨𝐭 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭 𝐦𝐚𝐤𝐞 𝐦𝐞 𝐚𝐝𝐦𝐢𝐧 𝐰𝐢𝐭𝐡 𝐛𝐚𝐧 𝐮𝐬𝐞𝐫 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧.__"
                     )
             else:
                 try:
                     client.get_chat_member(input_str, "me")
                     sql.add_channel(chat_id, input_str)
                     message.reply_text(
-                        f"✅ **Force Subscribe is Enabled**\n__Force Subscribe is enabled, all the group members have to subscribe this [channel](https://t.me/{input_str}) in order to send messages in this group.__",
+                        f"✅ **𝐅𝐨𝐫𝐜𝐞 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐢𝐬 𝐄𝐧𝐚𝐛𝐥𝐞𝐝**\n__𝐅𝐨𝐫𝐜𝐞 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐢𝐬 𝐞𝐧𝐚𝐛𝐥𝐞𝐝, 𝐚𝐥𝐥 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐡𝐚𝐯𝐞 𝐭𝐨 𝐬𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐭𝐡𝐢𝐬 [𝐂𝐡𝐚𝐧𝐧𝐞𝐥](https://t.me/{input_str}) 𝐢𝐧 𝐨𝐫𝐝𝐞𝐫 𝐭𝐨 𝐬𝐞𝐧𝐝 𝐦𝐞𝐬𝐬𝐚𝐠𝐞𝐬 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐠𝐫𝐨𝐮𝐩.__",
                         disable_web_page_preview=True,
                     )
                 except UserNotParticipant:
                     message.reply_text(
-                        f"❗ **Not an Admin in the Channel**\n__I am not an admin in the [channel](https://t.me/{input_str}). Add me as a admin in order to enable ForceSubscribe.__",
+                        f"❗ **𝐍𝐨𝐭 𝐚𝐧 𝐀𝐝𝐦𝐢𝐧 𝐢𝐧 𝐭𝐡𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥**\n__𝐈 𝐚𝐦 𝐧𝐨𝐭 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧 𝐢𝐧 𝐭𝐡𝐞 [𝐂𝐡𝐚𝐧𝐧𝐞𝐥](https://t.me/{input_str}). 𝐀𝐝𝐝 𝐦𝐞 𝐚𝐬 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧 𝐢𝐧 𝐨𝐫𝐝𝐞𝐫 𝐭𝐨 𝐞𝐧𝐚𝐛𝐥𝐞 𝐅𝐨𝐫𝐜𝐞𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞.__",
                         disable_web_page_preview=True,
                     )
                 except (UsernameNotOccupied, PeerIdInvalid):
-                    message.reply_text(f"❗ **Invalid Channel Username.**")
+                    message.reply_text(f"❗ **𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞.**")
                 except Exception as err:
-                    message.reply_text(f"❗ **ERROR:** ```{err}```")
+                    message.reply_text(f"❗ **𝐄𝐑𝐑𝐎𝐑:** ```{err}```")
         else:
             if sql.fs_settings(chat_id):
                 message.reply_text(
-                    f"✅ **Force Subscribe is enabled in this chat.**\n__For this [Channel](https://t.me/{sql.fs_settings(chat_id).channel})__",
+                    f"✅ **𝐅𝐨𝐫𝐜𝐞 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐢𝐬 𝐞𝐧𝐚𝐛𝐥𝐞𝐝 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭.**\n__𝐅𝐨𝐫 𝐭𝐡𝐢𝐬 [𝐂𝐡𝐚𝐧𝐧𝐞𝐥](https://t.me/{sql.fs_settings(chat_id).channel})__",
                     disable_web_page_preview=True,
                 )
             else:
-                message.reply_text("❌ **Force Subscribe is disabled in this chat.**")
+                message.reply_text("❌ **𝐅𝐨𝐫𝐜𝐞 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐢𝐬 𝐝𝐢𝐬𝐚𝐛𝐥𝐞𝐝 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭.**")
     else:
         message.reply_text(
-            "❗ **Group Creator Required**\n__You have to be the group creator to do that.__"
+            "❗ **𝐆𝐫𝐨𝐮𝐩 𝐂𝐫𝐞𝐚𝐭𝐨𝐫 𝐑𝐞𝐪𝐮𝐢𝐫𝐞𝐝**\n__𝐘𝐨𝐮 𝐡𝐚𝐯𝐞 𝐭𝐨 𝐛𝐞 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 𝐜𝐫𝐞𝐚𝐭𝐨𝐫 𝐭𝐨 𝐝𝐨 𝐭𝐡𝐚𝐭.__"
         )
 
 
 __help__ = """
-*Force Subscribe:*
-⚫ Lucas can mute members who are not subscribed your channel until they subscribe
-⚫ When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
-*Setup*
-*Only creator*
-⚫ Add me in your group as admin
-⚫ Add me in your channel as admin 
+*𝐅𝐨𝐫𝐜𝐞 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞:*
+⚫ 𝐋𝐮𝐜𝐚𝐬 𝐜𝐚𝐧 𝐦𝐮𝐭𝐞 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐰𝐡𝐨 𝐚𝐫𝐞 𝐧𝐨𝐭 𝐬𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞𝐝 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐮𝐧𝐭𝐢𝐥 𝐭𝐡𝐞𝐲 𝐬𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞
+⚫ 𝐖𝐡𝐞𝐧 𝐞𝐧𝐚𝐛𝐥𝐞𝐝 𝐈 𝐰𝐢𝐥𝐥 𝐦𝐮𝐭𝐞 𝐮𝐧𝐬𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞𝐝 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐚𝐧𝐝 𝐬𝐡𝐨𝐰 𝐭𝐡𝐞𝐦 𝐚 𝐮𝐧𝐦𝐮𝐭𝐞 𝐛𝐮𝐭𝐭𝐨𝐧. 𝐖𝐡𝐞𝐧 𝐭𝐡𝐞𝐲 𝐩𝐫𝐞𝐬𝐬𝐞𝐝 𝐭𝐡𝐞 𝐛𝐮𝐭𝐭𝐨𝐧 𝐈 𝐰𝐢𝐥𝐥 𝐮𝐧𝐦𝐮𝐭𝐞 𝐭𝐡𝐞𝐦
+*𝐒𝐞𝐭𝐮𝐩*
+*𝐎𝐧𝐥𝐲 𝐜𝐫𝐞𝐚𝐭𝐨𝐫*
+⚫ 𝐀𝐝𝐝 𝐦𝐞 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐚𝐬 𝐚𝐝𝐦𝐢𝐧
+⚫ 𝐀𝐝𝐝 𝐦𝐞 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐚𝐬 𝐚𝐝𝐦𝐢𝐧
  
-*Commmands*
- ❍ /fsub {channel username} - To turn on and setup the channel.
-  💡Do this first...
- ❍ /fsub - To get the current settings.
- ❍ /fsub disable - To turn of ForceSubscribe..
-  💡If you disable fsub, you need to set again for working.. /fsub {channel username} 
- ❍ /fsub clear - To unmute all members who muted by me.
+*𝐂𝐨𝐦𝐦𝐦𝐚𝐧𝐝𝐬*
+ ⚫ /fsub {Channel Username} - 𝐓𝐨 𝐭𝐮𝐫𝐧 𝐨𝐧 𝐚𝐧𝐝 𝐬𝐞𝐭𝐮𝐩 𝐭𝐡𝐞 𝐜𝐡𝐚𝐧𝐧𝐞𝐥.
+  💡𝐃𝐨 𝐭𝐡𝐢𝐬 𝐟𝐢𝐫𝐬𝐭...
+ ⚫ /fsub - 𝐓𝐨 𝐠𝐞𝐭 𝐭𝐡𝐞 𝐜𝐮𝐫𝐫𝐞𝐧𝐭 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬.
+ ⚫ /fusb disable - 𝐓𝐨 𝐭𝐮𝐫𝐧 𝐨𝐟 𝐅𝐨𝐫𝐜𝐞𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞..
+  💡𝐈𝐟 𝐲𝐨𝐮 𝐝𝐢𝐬𝐚𝐛𝐥𝐞 𝐟𝐬𝐮𝐛, 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐭𝐨 𝐬𝐞𝐭 𝐚𝐠𝐚𝐢𝐧 𝐟𝐨𝐫 𝐰𝐨𝐫𝐤𝐢𝐧𝐠.. 
+    /fsub {Channel Username} 
+ ⚫ /fsub clear - 𝐓𝐨 𝐮𝐧𝐦𝐮𝐭𝐞 𝐚𝐥𝐥 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐰𝐡𝐨 𝐦𝐮𝐭𝐞𝐝 𝐛𝐲 𝐦𝐞.
 """
-__mod_name__ = "F-Sub"
+__mod_name__ = "♾️𝐅-𝐒𝐮𝐛♾️"
