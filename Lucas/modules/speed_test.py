@@ -1,7 +1,7 @@
 import speedtest
-from YoneRobot import DEV_USERS, dispatcher
-from YoneRobot.modules.disable import DisableAbleCommandHandler
-from YoneRobot.modules.helper_funcs.chat_status import dev_plus
+from Lucas import DEV_USERS, dispatcher
+from Lucas.modules.disable import DisableAbleCommandHandler
+from Lucas.modules.helper_funcs.chat_status import dev_plus
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 
@@ -15,12 +15,12 @@ def convert(speed):
 def speedtestxyz(update: Update, context: CallbackContext):
     buttons = [
         [
-            InlineKeyboardButton("Image", callback_data="speedtest_image"),
-            InlineKeyboardButton("Text", callback_data="speedtest_text"),
+            InlineKeyboardButton("𝐈𝐦𝐚𝐠𝐞", callback_data="speedtest_image"),
+            InlineKeyboardButton("𝐓𝐞𝐱𝐭", callback_data="speedtest_text"),
         ]
     ]
     update.effective_message.reply_text(
-        "Select SpeedTest Mode", reply_markup=InlineKeyboardMarkup(buttons)
+        "𝐒𝐞𝐥𝐞𝐜𝐭 𝐒𝐩𝐞𝐞𝐝𝐓𝐞𝐬𝐭 𝐌𝐨𝐝𝐞", reply_markup=InlineKeyboardMarkup(buttons)
     )
 
 
@@ -29,12 +29,12 @@ def speedtestxyz_callback(update: Update, context: CallbackContext):
     query = update.callback_query
 
     if query.from_user.id in DEV_USERS:
-        msg = update.effective_message.edit_text("Running a speedtest....")
+        msg = update.effective_message.edit_text("𝐑𝐮𝐧𝐧𝐢𝐧𝐠 𝐚 𝐒𝐩𝐞𝐞𝐝 𝐭𝐞𝐬𝐭....")
         speed = speedtest.Speedtest()
         speed.get_best_server()
         speed.download()
         speed.upload()
-        replymsg = "SpeedTest Results:"
+        replymsg = "𝐒𝐩𝐞𝐞𝐝 𝐓𝐞𝐬𝐭 𝐑𝐞𝐬𝐮𝐥𝐭𝐬:"
 
         if query.data == "speedtest_image":
             speedtest_image = speed.results.share()
@@ -45,10 +45,10 @@ def speedtestxyz_callback(update: Update, context: CallbackContext):
 
         elif query.data == "speedtest_text":
             result = speed.results.dict()
-            replymsg += f"\nDownload: `{convert(result['download'])}Mb/s`\nUpload: `{convert(result['upload'])}Mb/s`\nPing: `{result['ping']}`"
+            replymsg += f"\n𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝: `{convert(result['download'])}Mb/s`\n𝐔𝐩𝐥𝐨𝐚𝐝: `{convert(result['upload'])}Mb/s`\n𝐏𝐢𝐧𝐠: `{result['ping']}`"
             update.effective_message.edit_text(replymsg, parse_mode=ParseMode.MARKDOWN)
     else:
-        query.answer("You are required to join Heroes Association to use this command.")
+        query.answer("𝐘𝐨𝐮 𝐚𝐫𝐞 𝐫𝐞𝐪𝐮𝐢𝐫𝐞𝐝 𝐭𝐨 𝐣𝐨𝐢𝐧 @𝐁𝐨𝐭𝐌𝐚𝐬𝐭𝐞𝐫𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥 𝐭𝐨 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝.")
 
 
 SPEED_TEST_HANDLER = DisableAbleCommandHandler("speedtest", speedtestxyz)
