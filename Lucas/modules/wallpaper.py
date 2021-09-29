@@ -27,11 +27,11 @@ def wall(update: Update, context: CallbackContext):
             f"https://wall.alphacoders.com/api2.0/get.php?auth={WALL_API}&method=search&term={term}"
         ).json()
         if not json_rep.get("success"):
-            msg.reply_text(f"An error occurred! Report this @{SUPPORT_CHAT}")
+            msg.reply_text(f"𝐀𝐧 𝐞𝐫𝐫𝐨𝐫 𝐨𝐜𝐜𝐮𝐫𝐫𝐞𝐝! 𝐑𝐞𝐩𝐨𝐫𝐭 𝐭𝐡𝐢𝐬 @{SUPPORT_CHAT}")
         else:
             wallpapers = json_rep.get("wallpapers")
             if not wallpapers:
-                msg.reply_text("No results found! Refine your search.")
+                msg.reply_text("𝐍𝐨 𝐫𝐞𝐬𝐮𝐥𝐭𝐬 𝐟𝐨𝐮𝐧𝐝 ! 𝐑𝐞𝐟𝐢𝐧𝐞 𝐲𝐨𝐮𝐫 𝐬𝐞𝐚𝐫𝐜𝐡.")
                 return
             else:
                 index = randint(0, len(wallpapers) - 1)  # Choose random index
