@@ -3,6 +3,8 @@
 
 #
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a552e6fb821b446a901fdf88623bfb4b)](https://app.codacy.com/gh/BotMasterOfficial/Lucas?utm_source=github.com&utm_medium=referral&utm_content=BotMasterOfficial/Lucas&utm_campaign=Badge_Grade_Settings)
+
 <p align="center">
     <a href="https://github.com/BotMasterOfficial/Lucas/stargazers"><img src="https://img.shields.io/github/stars/BotMasterOfficial/Lucas?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
 </p>
