@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/github/forks/BotMasterOfficial/Lucas?style=social" />
 <img src="https://img.shields.io/github/stars/BotMasterOfficial/Lucas?style=social" />
 <img src="https://img.shields.io/github/watchers/BotMasterOfficial/Lucas?style=social" />
-<img src="https://img.shields.io/github/repo-size/BotMasterOfficial/Lucas?style=social&logo=github" />
+<a href="https://github.com/BotMasterOfficial/Lucas"><img src="https://img.shields.io/github/repo-size/BotMasterOfficial/Lucas?style=social&logo=github" />
 <a href="https://github.com/BotMasterOfficial/Lucas/commits/mukesh"><img src="https://img.shields.io/github/last-commit/BotMasterOfficial/Lucas?style=social&logo=github" />
 <img src="https://img.shields.io/github/issues/BotMasterOfficial/Lucas?style=social&logo=github" />
 <img src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=social&logo=github" />
