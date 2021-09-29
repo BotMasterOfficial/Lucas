@@ -1,8 +1,8 @@
 import time
 from telethon import events
 
-from YoneRobot import telethn
-from YoneRobot.modules.helper_funcs.telethn.chatstatus import (
+from Lucas import telethn
+from Lucas.modules.helper_funcs.telethn.chatstatus import (
     can_delete_messages,
     user_is_admin,
 )
@@ -16,16 +16,16 @@ async def purge_messages(event):
     if not await user_is_admin(
         user_id=event.sender_id, message=event
     ) and event.from_id not in [1087968824]:
-        await event.reply("Only Admins are allowed to use this command")
+        await event.reply("𝐎𝐧𝐥𝐲 𝐀𝐝𝐦𝐢𝐧𝐬 𝐚𝐫𝐞 𝐚𝐥𝐥𝐨𝐰𝐞𝐝 𝐭𝐨 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝")
         return
 
     if not await can_delete_messages(message=event):
-        await event.reply("Can't seem to purge the message")
+        await event.reply("𝐂𝐚𝐧'𝐭 𝐬𝐞𝐞𝐦 𝐭𝐨 𝐩𝐮𝐫𝐠𝐞 𝐭𝐡𝐞 𝐦𝐞𝐬𝐬𝐚𝐠𝐞")
         return
 
     reply_msg = await event.get_reply_message()
     if not reply_msg:
-        await event.reply("Reply to a message to select where to start purging from.")
+        await event.reply("𝐑𝐞𝐩𝐥𝐲 𝐭𝐨 𝐚 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐭𝐨 𝐬𝐞𝐥𝐞𝐜𝐭 𝐰𝐡𝐞𝐫𝐞 𝐭𝐨 𝐬𝐭𝐚𝐫𝐭 𝐩𝐮𝐫𝐠𝐢𝐧𝐠 𝐟𝐫𝐨𝐦.")
         return
     messages = []
     message_id = reply_msg.id
@@ -43,7 +43,7 @@ async def purge_messages(event):
     except:
         pass
     time_ = time.perf_counter() - start
-    text = f"Purged Successfully in {time_:0.2f} Second(s)"
+    text = f"𝐏𝐮𝐫𝐠𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐢𝐧 {time_:0.2f} Second(s)"
     await event.respond(text, parse_mode="markdown")
 
 
@@ -54,16 +54,16 @@ async def delete_messages(event):
     if not await user_is_admin(
         user_id=event.sender_id, message=event
     ) and event.from_id not in [1087968824]:
-        await event.reply("Only Admins are allowed to use this command")
+        await event.reply("𝐎𝐧𝐥𝐲 𝐀𝐝𝐦𝐢𝐧𝐬 𝐚𝐫𝐞 𝐚𝐥𝐥𝐨𝐰𝐞𝐝 𝐭𝐨 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝")
         return
 
     if not await can_delete_messages(message=event):
-        await event.reply("Can't seem to delete this?")
+        await event.reply("𝐂𝐚𝐧'𝐭 𝐬𝐞𝐞𝐦 𝐭𝐨 𝐝𝐞𝐥𝐞𝐭𝐞 𝐭𝐡𝐢𝐬?")
         return
 
     message = await event.get_reply_message()
     if not message:
-        await event.reply("Whadya want to delete?")
+        await event.reply("𝐖𝐡𝐚𝐭 𝐝𝐨 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐝𝐞𝐥𝐞𝐭𝐞?")
         return
     chat = await event.get_input_chat()
     del_message = [message, event.message]
