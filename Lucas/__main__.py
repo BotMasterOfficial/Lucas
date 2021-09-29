@@ -355,16 +355,16 @@ def yone_about_callback(update, context):
     query = update.callback_query
     if query.data == "yone_":
         query.message.edit_text(
-            text=""" ℹ️ I am *Lucas*, a powerful group management bot built to help you manage your group easily.
-                 \n⚫ I can restrict users.
-                 \n⚫ I can greet users with customizable welcome messages and even set a group's rules.
-                 \n⚫ I have an advanced anti-flood system.
-                 \n⚫ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
-                 \n⚫ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-                 \n⚫ I check for admins' permissions before executing any command and more stuffs
-                 \n\n_Lucas's licensed under the GNU General Public License v3.0_
-                 \nHere is the [💾Repository💾](https://github.com/BotMasterOfficial/Lucas).
-                 \n\nIf you have any question about yone, let us know at .""",
+            text=""" ℹ️ 𝐈 𝐚𝐦 *𝐋𝐮𝐜𝐚𝐬*, 𝐚 𝐩𝐨𝐰𝐞𝐫𝐟𝐮𝐥 𝐠𝐫𝐨𝐮𝐩 𝐦𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐛𝐨𝐭 𝐛𝐮𝐢𝐥𝐭 𝐭𝐨 𝐡𝐞𝐥𝐩 𝐲𝐨𝐮 𝐦𝐚𝐧𝐚𝐠𝐞 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐞𝐚𝐬𝐢𝐥𝐲.
+                 \n⚫ 𝐈 𝐜𝐚𝐧 𝐫𝐞𝐬𝐭𝐫𝐢𝐜𝐭 𝐮𝐬𝐞𝐫𝐬.
+                 \n⚫ 𝐈 𝐜𝐚𝐧 𝐠𝐫𝐞𝐞𝐭 𝐮𝐬𝐞𝐫𝐬 𝐰𝐢𝐭𝐡 𝐜𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐛𝐥𝐞 𝐰𝐞𝐥𝐜𝐨𝐦𝐞 𝐦𝐞𝐬𝐬𝐚𝐠𝐞𝐬 𝐚𝐧𝐝 𝐞𝐯𝐞𝐧 𝐬𝐞𝐭 𝐚 𝐠𝐫𝐨𝐮𝐩'𝐬 𝐫𝐮𝐥𝐞𝐬.
+                 \n⚫ 𝐈 𝐡𝐚𝐯𝐞 𝐚𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐚𝐧𝐭𝐢-𝐟𝐥𝐨𝐨𝐝 𝐬𝐲𝐬𝐭𝐞𝐦.
+                 \n⚫ 𝐈 𝐜𝐚𝐧 𝐰𝐚𝐫𝐧 𝐮𝐬𝐞𝐫𝐬 𝐮𝐧𝐭𝐢𝐥 𝐭𝐡𝐞𝐲 𝐫𝐞𝐚𝐜𝐡 𝐦𝐚𝐱 𝐰𝐚𝐫𝐧𝐬, 𝐰𝐢𝐭𝐡 𝐞𝐚𝐜𝐡 𝐩𝐫𝐞𝐝𝐞𝐟𝐢𝐧𝐞𝐝 𝐚𝐜𝐭𝐢𝐨𝐧𝐬 𝐬𝐮𝐜𝐡 𝐚𝐬 𝐛𝐚𝐧, 𝐦𝐮𝐭𝐞, 𝐤𝐢𝐜𝐤, 𝐞𝐭𝐜.
+                 \n⚫ 𝐈 𝐡𝐚𝐯𝐞 𝐚 𝐧𝐨𝐭𝐞 𝐤𝐞𝐞𝐩𝐢𝐧𝐠 𝐬𝐲𝐬𝐭𝐞𝐦, 𝐛𝐥𝐚𝐜𝐤𝐥𝐢𝐬𝐭𝐬, 𝐚𝐧𝐝 𝐞𝐯𝐞𝐧 𝐩𝐫𝐞𝐝𝐞𝐭𝐞𝐫𝐦𝐢𝐧𝐞𝐝 𝐫𝐞𝐩𝐥𝐢𝐞𝐬 𝐨𝐧 𝐜𝐞𝐫𝐭𝐚𝐢𝐧 𝐤𝐞𝐲𝐰𝐨𝐫𝐝𝐬.
+                 \n⚫ 𝐈 𝐜𝐡𝐞𝐜𝐤 𝐟𝐨𝐫 𝐚𝐝𝐦𝐢𝐧𝐬' 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧𝐬 𝐛𝐞𝐟𝐨𝐫𝐞 𝐞𝐱𝐞𝐜𝐮𝐭𝐢𝐧𝐠 𝐚𝐧𝐲 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐚𝐧𝐝 𝐦𝐨𝐫𝐞 𝐬𝐭𝐮𝐟𝐟𝐬
+                 \n⚫ 𝐋𝐮𝐜𝐚𝐬'𝐬 𝐥𝐢𝐜𝐞𝐧𝐬𝐞𝐝 𝐮𝐧𝐝𝐞𝐫 𝐭𝐡𝐞 𝐆𝐍𝐔 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐏𝐮𝐛𝐥𝐢𝐜 𝐋𝐢𝐜𝐞𝐧𝐬𝐞 𝐯𝟑.𝟎
+                 \n⚫ 𝐇𝐞𝐫𝐞 𝐢𝐬 𝐭𝐡𝐞 [💾𝐑𝐞𝐩𝐨𝐬𝐢𝐭𝐨𝐫𝐲💾](https://github.com/BotMasterOfficial/Lucas)
+                 \n⚫ 𝐈𝐟 𝐲𝐨𝐮 𝐡𝐚𝐯𝐞 𝐚𝐧𝐲 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐚𝐛𝐨𝐮𝐭 𝐲𝐨𝐧𝐞, 𝐥𝐞𝐭 𝐮𝐬 𝐤𝐧𝐨𝐰 𝐚𝐭 @BotMasterOfficial""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -390,8 +390,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hello..🤗 I am *Lucas*
-                 \nHere is the [Source Code](https://github.com/BotMasterOfficial/Lucas) .""",
+            text=""" 𝐇𝐞𝐥𝐥𝐨..🤗 𝐈 𝐚𝐦 *𝐋𝐮𝐜𝐚𝐬*
+                 \n𝐇𝐞𝐫𝐞 𝐢𝐬 𝐭𝐡𝐞 [𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞](https://github.com/BotMasterOfficial/Lucas) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -480,14 +480,14 @@ def send_settings(chat_id, user_id, user=False):
             )
             dispatcher.bot.send_message(
                 user_id,
-                "These are your current settings:" + "\n\n" + settings,
+                "𝐓𝐡𝐞𝐬𝐞 𝐚𝐫𝐞 𝐲𝐨𝐮𝐫 𝐜𝐮𝐫𝐫𝐞𝐧𝐭 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬:" + "\n\n" + settings,
                 parse_mode=ParseMode.MARKDOWN,
             )
 
         else:
             dispatcher.bot.send_message(
                 user_id,
-                "Seems like there aren't any user specific settings available :'(",
+                "𝐒𝐞𝐞𝐦𝐬 𝐥𝐢𝐤𝐞 𝐭𝐡𝐞𝐫𝐞 𝐚𝐫𝐞𝐧'𝐭 𝐚𝐧𝐲 𝐮𝐬𝐞𝐫 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐜 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 :'(",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -506,8 +506,8 @@ def send_settings(chat_id, user_id, user=False):
         else:
             dispatcher.bot.send_message(
                 user_id,
-                "Seems like there aren't any chat settings available :'(\nSend this "
-                "in a group chat you're admin in to find its current settings!",
+                "𝐒𝐞𝐞𝐦𝐬 𝐥𝐢𝐤𝐞 𝐭𝐡𝐞𝐫𝐞 𝐚𝐫𝐞𝐧'𝐭 𝐚𝐧𝐲 𝐮𝐬𝐞𝐫 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐜 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 :'(\nSend this "
+                "𝐢𝐧 𝐚 𝐠𝐫𝐨𝐮𝐩 𝐜𝐡𝐚𝐭 𝐲𝐨𝐮'𝐫𝐞 𝐚𝐝𝐦𝐢𝐧 𝐢𝐧 𝐭𝐨 𝐟𝐢𝐧𝐝 𝐢𝐭𝐬 𝐜𝐮𝐫𝐫𝐞𝐧𝐭 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬!",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -549,8 +549,8 @@ def settings_button(update: Update, context: CallbackContext):
             curr_page = int(prev_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "𝐇𝐢 𝐭𝐡𝐞𝐫𝐞! 𝐓𝐡𝐞𝐫𝐞 𝐚𝐫𝐞 𝐪𝐮𝐢𝐭𝐞 𝐚 𝐟𝐞𝐰 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬 𝐟𝐨𝐫 {} - 𝐠𝐨 𝐚𝐡𝐞𝐚𝐝 𝐚𝐧𝐝 𝐩𝐢𝐜𝐤 𝐰𝐡𝐚𝐭 "
+                "𝐲𝐨𝐮'𝐫𝐞 𝐢𝐧𝐭𝐞𝐫𝐞𝐬𝐭𝐞𝐝 𝐢𝐧.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         curr_page - 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -563,8 +563,8 @@ def settings_button(update: Update, context: CallbackContext):
             next_page = int(next_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "𝐇𝐢 𝐭𝐡𝐞𝐫𝐞! 𝐓𝐡𝐞𝐫𝐞 𝐚𝐫𝐞 𝐪𝐮𝐢𝐭𝐞 𝐚 𝐟𝐞𝐰 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬 𝐟𝐨𝐫 {} - 𝐠𝐨 𝐚𝐡𝐞𝐚𝐝 𝐚𝐧𝐝 𝐩𝐢𝐜𝐤 𝐰𝐡𝐚𝐭 "
+                "𝐲𝐨𝐮'𝐫𝐞 𝐢𝐧𝐭𝐞𝐫𝐞𝐬𝐭𝐞𝐝 𝐢𝐧.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         next_page + 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -576,8 +576,8 @@ def settings_button(update: Update, context: CallbackContext):
             chat_id = back_match.group(1)
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                text="Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(escape_markdown(chat.title)),
+                text="𝐇𝐢 𝐭𝐡𝐞𝐫𝐞! 𝐓𝐡𝐞𝐫𝐞 𝐚𝐫𝐞 𝐪𝐮𝐢𝐭𝐞 𝐚 𝐟𝐞𝐰 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬 𝐟𝐨𝐫 {} - 𝐠𝐨 𝐚𝐡𝐞𝐚𝐝 𝐚𝐧𝐝 𝐩𝐢𝐜𝐤 𝐰𝐡𝐚𝐭 "
+                "𝐲𝐨𝐮'𝐫𝐞 𝐢𝐧𝐭𝐞𝐫𝐞𝐬𝐭𝐞𝐝 𝐢𝐧.".format(escape_markdown(chat.title)),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
@@ -605,7 +605,7 @@ def get_settings(update: Update, context: CallbackContext):
     # ONLY send settings in PM
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
-            text = "Click here to get this chat's settings, as well as yours."
+            text = "𝐂𝐥𝐢𝐜𝐤 𝐡𝐞𝐫𝐞 𝐭𝐨 𝐠𝐞𝐭 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭'𝐬 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬, 𝐚𝐬 𝐰𝐞𝐥𝐥 𝐚𝐬 𝐲𝐨𝐮𝐫𝐬."
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
@@ -622,7 +622,7 @@ def get_settings(update: Update, context: CallbackContext):
                 ),
             )
         else:
-            text = "Click here to check your settings."
+            text = "𝐂𝐥𝐢𝐜𝐤 𝐡𝐞𝐫𝐞 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤 𝐲𝐨𝐮𝐫 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬."
 
     else:
         send_settings(chat.id, user.id, True)
@@ -640,8 +640,8 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 412094015 and DONATION_LINK:
             update.effective_message.reply_text(
-                "You can also donate to the person currently running me "
-                "[here]({})".format(DONATION_LINK),
+                "𝐘𝐨𝐮 𝐜𝐚𝐧 𝐚𝐥𝐬𝐨 𝐝𝐨𝐧𝐚𝐭𝐞 𝐭𝐨 𝐭𝐡𝐞 𝐩𝐞𝐫𝐬𝐨𝐧 𝐜𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲 𝐫𝐮𝐧𝐧𝐢𝐧𝐠 𝐦𝐞 "
+                "[𝐇𝐞𝐫𝐞]({})".format(DONATION_LINK),
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -655,11 +655,11 @@ def donate(update: Update, context: CallbackContext):
             )
 
             update.effective_message.reply_text(
-                "I've PM'ed you about donating to my creator!"
+                "𝐈'𝐯𝐞 𝐏𝐌'𝐞𝐝 𝐲𝐨𝐮 𝐚𝐛𝐨𝐮𝐭 𝐝𝐨𝐧𝐚𝐭𝐢𝐧𝐠 𝐭𝐨 𝐦𝐲 𝐜𝐫𝐞𝐚𝐭𝐨𝐫!"
             )
         except Unauthorized:
             update.effective_message.reply_text(
-                "Contact me in PM first to get donation information."
+                "𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐦𝐞 𝐢𝐧 𝐏𝐌 𝐟𝐢𝐫𝐬𝐭 𝐭𝐨 𝐠𝐞𝐭 𝐝𝐨𝐧𝐚𝐭𝐢𝐨𝐧 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧."
             )
 
 
@@ -686,7 +686,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yes I'm alive 😹")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "𝐘𝐞𝐬 𝐈'𝐦 𝐚𝐥𝐢𝐯𝐞 😹")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
