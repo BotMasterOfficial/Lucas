@@ -50,7 +50,7 @@ async def hmm(_, message):
     global lucas_chats
     if len(message.command) != 2:
         await message.reply_text(
-            "I only recognize `/chatbot on` and /chatbot `off only`"
+            "𝐈 𝐨𝐧𝐥𝐲 𝐫𝐞𝐜𝐨𝐠𝐧𝐢𝐳𝐞 `/chatbot on` and /chatbot `off only`"
         )
         message.continue_propagation()
     status = message.text.split(None, 1)[1]
@@ -59,28 +59,28 @@ async def hmm(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("lucas AI Already Activated In This Chat")
+            await lel.edit("𝐋𝐮𝐜𝐚𝐬 𝐀𝐈 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝 𝐈𝐧 𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭")
             return
         await lel.edit(
-            f"lucas AI Successfully Added For Users In The Chat {message.chat.id}"
+            f"𝐋𝐮𝐜𝐚𝐬 𝐀𝐈 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐀𝐝𝐝𝐞𝐝 𝐅𝐨𝐫 𝐔𝐬𝐞𝐫𝐬 𝐈𝐧 𝐓𝐡𝐞 𝐂𝐡𝐚𝐭 {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await edit_or_reply(message, "`Processing...`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
-            await lel.edit("lucas AI Was Not Activated In This Chat")
+            await lel.edit("𝐋𝐮𝐜𝐚𝐬 𝐀𝐈 𝐖𝐚𝐬 𝐍𝐨𝐭 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝 𝐈𝐧 𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭")
             return
         await lel.edit(
-            f"lucas AI Successfully Deactivated For Users In The Chat {message.chat.id}"
+            f"𝐋𝐮𝐜𝐚𝐬 𝐀𝐈 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐞𝐚𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝 𝐅𝐨𝐫 𝐔𝐬𝐞𝐫𝐬 𝐈𝐧 𝐓𝐡𝐞 𝐂𝐡𝐚𝐭 {message.chat.id}"
         )
 
     elif status == "EN" or status == "en" or status == "english":
         if not chat_id in en_chats:
             en_chats.append(chat_id)
-            await message.reply_text("English AI chat Enabled!")
+            await message.reply_text("𝐄𝐧𝐠𝐥𝐢𝐬𝐡 𝐀𝐈 𝐜𝐡𝐚𝐭 𝐄𝐧𝐚𝐛𝐥𝐞𝐝!")
             return
-        await message.reply_text("AI Chat Is Already Disabled.")
+        await message.reply_text("𝐀𝐈 𝐂𝐡𝐚𝐭 𝐈𝐬 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐃𝐢𝐬𝐚𝐛𝐥𝐞𝐝.")
         message.continue_propagation()
     else:
         await message.reply_text(
@@ -355,11 +355,11 @@ async def inuka(client, message):
 
 
 __help__ = """
-<b> Chatbot </b>
-Yone AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
- - /chatbot [ON/OFF]: Enables and disables AI Chat mode (EXCLUSIVE)
- - /chatbot EN : Enables English only chatbot
+𝐂𝐡𝐚𝐭𝐁𝐨𝐭
+𝐋𝐮𝐜𝐚𝐬 𝐀𝐈 𝟑.𝟎 𝐈𝐒 𝐓𝐡𝐞 𝐎𝐧𝐥𝐲 𝐀𝐈 𝐒𝐲𝐬𝐭𝐞𝐦 𝐖𝐡𝐢𝐜𝐡 𝐂𝐚𝐧 𝐃𝐞𝐭𝐞𝐜𝐭 & 𝐑𝐞𝐩𝐥𝐲 𝐔𝐩𝐭𝐨 𝟐𝟎𝟎 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞
+ - /chatbot [ON/OFF]: 𝐄𝐧𝐚𝐛𝐥𝐞𝐬 𝐚𝐧𝐝 𝐝𝐢𝐬𝐚𝐛𝐥𝐞𝐬 𝐀𝐈 𝐂𝐡𝐚𝐭 𝐦𝐨𝐝𝐞 (𝐄𝐗𝐂𝐋𝐔𝐒𝐈𝐕𝐄)
+ - /chatbot EN : 𝐄𝐧𝐚𝐛𝐥𝐞𝐬 𝐄𝐧𝐠𝐥𝐢𝐬𝐡 𝐨𝐧𝐥𝐲 𝐜𝐡𝐚𝐭𝐛𝐨𝐭
  
 """
 
-__mod_name__ = "chatbot"
+__mod_name__ = "🗨️𝐂𝐡𝐚𝐭𝐁𝐨𝐭🗨️"
