@@ -19,7 +19,7 @@ async def msg(event):
     try:
 	    a = country.info()
     except:
-	    await event.reply("Country Not Avaiable Currently")
+	    await event.reply("𝐂𝐨𝐮𝐧𝐭𝐫𝐲 𝐍𝐨𝐭 𝐀𝐯𝐚𝐢𝐚𝐛𝐥𝐞 𝐂𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲")
     name = a.get("name")
     bb= a.get("altSpellings")
     hu = ''
@@ -79,29 +79,29 @@ async def msg(event):
 
     wiki = a.get("wiki")
 
-    caption = f"""<b><u>Information Gathered Successfully</b></u>
+    caption = f"""<b><u>𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐆𝐚𝐭𝐡𝐞𝐫𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲</b></u>
 <b>
-Country Name:- {name}
-Alternative Spellings:- {hu}
-Country Area:- {area} square kilometers
-Borders:- {borders}
-Calling Codes:- {call}
-Country's Capital:- {capital}
-Country's currency:- {currencies}
-Country's Flag:- {okie}
-Demonym:- {HmM}
-Country Type:- {EsCoBaR}
-ISO Names:- {iso}
-Languages:- {lMAO}
-Native Name:- {nonive}
-population:- {waste}
-Region:- {reg}
-Sub Region:- {sub}
-Time Zones:- {tom}
-Top Level Domain:- {lanester}
-wikipedia:- {wiki}</b>
+𝐂𝐨𝐮𝐧𝐭𝐫𝐲 𝐍𝐚𝐦𝐞:- {name}
+𝐀𝐥𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐯𝐞 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠:- {hu}
+𝐂𝐨𝐮𝐧𝐭𝐫𝐲 𝐀𝐫𝐞𝐚:- {area} square kilometers
+𝐁𝐨𝐫𝐝𝐞𝐫𝐬:- {borders}
+𝐂𝐚𝐥𝐥𝐢𝐧𝐠 𝐂𝐨𝐝𝐞:- {call}
+𝐂𝐨𝐮𝐧𝐭𝐫𝐲'𝐬 𝐂𝐚𝐩𝐢𝐭𝐚𝐥:- {capital}
+𝐂𝐨𝐮𝐧𝐭𝐫𝐲'𝐬 𝐂𝐮𝐫𝐫𝐞𝐧𝐜𝐲:- {currencies}
+𝐂𝐨𝐮𝐧𝐭𝐫𝐲'𝐬 𝐅𝐥𝐚𝐠:- {okie}
+𝐃𝐞𝐦𝐨𝐧𝐲𝐦:- {HmM}
+𝐂𝐨𝐮𝐧𝐭𝐫𝐲 𝐓𝐲𝐩𝐞:- {EsCoBaR}
+𝐈𝐒𝐎 𝐍𝐚𝐦𝐞𝐬:- {iso}
+𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞𝐬:- {lMAO}
+𝐍𝐚𝐭𝐢𝐯𝐞 𝐍𝐚𝐦𝐞:- {nonive}
+𝐏𝐨𝐩𝐮𝐥𝐚𝐭𝐢𝐨𝐧:- {waste}
+𝐑𝐞𝐠𝐢𝐨𝐧:- {reg}
+𝐒𝐮𝐛 𝐑𝐞𝐠𝐢𝐨𝐧:- {sub}
+𝐓𝐢𝐦𝐞 𝐙𝐨𝐧𝐞𝐬:- {tom}
+𝐓𝐨𝐩 𝐋𝐞𝐯𝐞𝐥 𝐃𝐨𝐦𝐚𝐢𝐧:- {lanester}
+𝐖𝐢𝐤𝐢𝐩𝐞𝐝𝐢𝐚:- {wiki}</b>
 
-Gathered By Yone.</b>
+𝐆𝐚𝐭𝐡𝐞𝐫𝐞𝐝 𝐁𝐲 𝐋𝐮𝐜𝐚𝐬.</b>
 """
     
     
