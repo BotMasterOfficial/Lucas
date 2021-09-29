@@ -1,9 +1,9 @@
-__mod_name__ = "◎Music"
+__mod_name__ = "🎧𝐌𝐮𝐬𝐢𝐜🎧"
 
 __help__ = """
-/video <i>query</i>: download video from youtube
-/deezer <i>query</i>: download from deezer
-/music <i>query</i>: download song from yt servers. (API BASED)
-/lyrics <i>song name</i> : This plugin searches for song lyrics with song name.
-/glyrics <i> song name </i> : This plugin searches for song lyrics with song name and artist.
+/video <𝐪𝐮𝐞𝐫𝐲>: 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐯𝐢𝐝𝐞𝐨 𝐟𝐫𝐨𝐦 𝐲𝐨𝐮𝐭𝐮𝐛𝐞
+/deezer <𝐪𝐮𝐞𝐫𝐲>: 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐟𝐫𝐨𝐦 𝐝𝐞𝐞𝐳𝐞𝐫
+/music <𝐪𝐮𝐞𝐫𝐲>: 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐬𝐨𝐧𝐠 𝐟𝐫𝐨𝐦 𝐲𝐭 𝐬𝐞𝐫𝐯𝐞𝐫𝐬. (𝐀𝐏𝐈 𝐁𝐀𝐒𝐄𝐃)
+/lyrics <𝐬𝐨𝐧𝐠 𝐧𝐚𝐦𝐞> : 𝐓𝐡𝐢𝐬 𝐩𝐥𝐮𝐠𝐢𝐧 𝐬𝐞𝐚𝐫𝐜𝐡𝐞𝐬 𝐟𝐨𝐫 𝐬𝐨𝐧𝐠 𝐥𝐲𝐫𝐢𝐜𝐬 𝐰𝐢𝐭𝐡 𝐬𝐨𝐧𝐠 𝐧𝐚𝐦𝐞.
+/glyrics <𝐬𝐨𝐧𝐠 𝐧𝐚𝐦𝐞> : 𝐓𝐡𝐢𝐬 𝐩𝐥𝐮𝐠𝐢𝐧 𝐬𝐞𝐚𝐫𝐜𝐡𝐞𝐬 𝐟𝐨𝐫 𝐬𝐨𝐧𝐠 𝐥𝐲𝐫𝐢𝐜𝐬 𝐰𝐢𝐭𝐡 𝐬𝐨𝐧𝐠 𝐧𝐚𝐦𝐞 𝐚𝐧𝐝 𝐚𝐫𝐭𝐢𝐬𝐭.
 """
