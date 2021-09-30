@@ -2,11 +2,11 @@ import html
 import random
 import time
 
-import YoneRobot.modules.fun_strings as fun_strings
-from YoneRobot import dispatcher
-from YoneRobot.modules.disable import DisableAbleCommandHandler
-from YoneRobot.modules.helper_funcs.chat_status import is_user_admin
-from YoneRobot.modules.helper_funcs.extraction import extract_user
+import Lucas.modules.fun_strings as fun_strings
+from Lucas import dispatcher
+from Lucas.modules.disable import DisableAbleCommandHandler
+from Lucas.modules.helper_funcs.chat_status import is_user_admin
+from Lucas.modules.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
@@ -67,7 +67,7 @@ def slap(update: Update, context: CallbackContext):
     user_id = extract_user(message, args)
 
     if user_id == bot.id:
-        temp = random.choice(fun_strings.SLAP_YONE_TEMPLATES)
+        temp = random.choice(fun_strings.SLAP_LUCAS_TEMPLATES)
 
         if isinstance(temp, list):
             if temp[2] == "tmute":
@@ -310,7 +310,7 @@ def weebify(update: Update, context: CallbackContext):
         string = "  ".join(args).lower()
 
     if not string:
-        message.reply_text("Usage is `/weebify <text>`", parse_mode=ParseMode.MARKDOWN)
+        message.reply_text("𝐔𝐬𝐚𝐠𝐞 𝐢𝐬 `/weebify <𝐭𝐞𝐱𝐭>`", parse_mode=ParseMode.MARKDOWN)
         return
 
     for normiecharacter in string:
@@ -325,20 +325,20 @@ def weebify(update: Update, context: CallbackContext):
 
 
 __help__ = """
- ❍ /runs*:* reply a random string from an array of replies
- ❍ /slap*:* slap a user, or get slapped if not a reply
- ❍ /shrug*:* get shrug XD
- ❍ /table*:* get flip/unflip :v
- ❍ /decide*:* Randomly answers yes/no/maybe
- ❍ /toss*:* Tosses A coin
- ❍ /bluetext*:* check urself :V
- ❍ /roll*:* Roll a dice
- ❍ /rlg*:* Join ears,nose,mouth and create an emo ;-;
- ❍ /shout <keyword>*:* write anything you want to give loud shout
- ❍ /weebify <text>*:* returns a weebified text
- ❍ /sanitize*:* always use this before /pat or any contact
- ❍ /pat*:* pats a user, or get patted
- ❍ /8ball*:* predicts using 8ball method 
+⚫ /runs*:* 𝐫𝐞𝐩𝐥𝐲 𝐚 𝐫𝐚𝐧𝐝𝐨𝐦 𝐬𝐭𝐫𝐢𝐧𝐠 𝐟𝐫𝐨𝐦 𝐚𝐧 𝐚𝐫𝐫𝐚𝐲 𝐨𝐟 𝐫𝐞𝐩𝐥𝐢𝐞𝐬
+⚫ /slap*:* 𝐬𝐥𝐚𝐩 𝐚 𝐮𝐬𝐞𝐫, 𝐨𝐫 𝐠𝐞𝐭 𝐬𝐥𝐚𝐩𝐩𝐞𝐝 𝐢𝐟 𝐧𝐨𝐭 𝐚 𝐫𝐞𝐩𝐥𝐲
+⚫ /shrug*:* 𝐠𝐞𝐭 𝐬𝐡𝐫𝐮𝐠 𝐗𝐃
+⚫ /table*:* 𝐠𝐞𝐭 𝐟𝐥𝐢𝐩/𝐮𝐧𝐟𝐥𝐢𝐩 :𝐯
+⚫ /decide*:* 𝐑𝐚𝐧𝐝𝐨𝐦𝐥𝐲 𝐚𝐧𝐬𝐰𝐞𝐫𝐬 𝐲𝐞𝐬/𝐧𝐨/𝐦𝐚𝐲𝐛𝐞
+⚫ /toss*:* 𝐓𝐨𝐬𝐬𝐞𝐬 𝐀 𝐜𝐨𝐢𝐧
+⚫ /bluetext*:* 𝐜𝐡𝐞𝐜𝐤 𝐮𝐫𝐬𝐞𝐥𝐟 :𝐕
+⚫ /roll*:* 𝐑𝐨𝐥𝐥 𝐚 𝐝𝐢𝐜𝐞
+⚫ /rlg*:* 𝐉𝐨𝐢𝐧 𝐞𝐚𝐫𝐬,𝐧𝐨𝐬𝐞,𝐦𝐨𝐮𝐭𝐡 𝐚𝐧𝐝 𝐜𝐫𝐞𝐚𝐭𝐞 𝐚𝐧 𝐞𝐦𝐨 ;-;
+⚫ /shout <𝐤𝐞𝐲𝐰𝐨𝐫𝐝>*:* 𝐰𝐫𝐢𝐭𝐞 𝐚𝐧𝐲𝐭𝐡𝐢𝐧𝐠 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐠𝐢𝐯𝐞 𝐥𝐨𝐮𝐝 𝐬𝐡𝐨𝐮𝐭
+⚫ /weebify <𝐭𝐞𝐱𝐭>*:* 𝐫𝐞𝐭𝐮𝐫𝐧𝐬 𝐚 𝐰𝐞𝐞𝐛𝐢𝐟𝐢𝐞𝐝 𝐭𝐞𝐱𝐭
+⚫ /sanitize*:* 𝐚𝐥𝐰𝐚𝐲𝐬 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐛𝐞𝐟𝐨𝐫𝐞 /𝐩𝐚𝐭 𝐨𝐫 𝐚𝐧𝐲 𝐜𝐨𝐧𝐭𝐚𝐜𝐭
+⚫ /pat*:* 𝐩𝐚𝐭𝐬 𝐚 𝐮𝐬𝐞𝐫, 𝐨𝐫 𝐠𝐞𝐭 𝐩𝐚𝐭𝐭𝐞𝐝
+⚫ /8ball*:* 𝐩𝐫𝐞𝐝𝐢𝐜𝐭𝐬 𝐮𝐬𝐢𝐧𝐠 𝟖𝐛𝐚𝐥𝐥 𝐦𝐞𝐭𝐡𝐨𝐝
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize)
@@ -371,7 +371,7 @@ dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
 
-__mod_name__ = "Memes"
+__mod_name__ = "📝𝐌𝐞𝐦𝐞𝐬📝"
 __command_list__ = [
     "runs",
     "slap",
