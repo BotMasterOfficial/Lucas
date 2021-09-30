@@ -1,9 +1,9 @@
 import os
 from time import sleep
 
-from YoneRobot import OWNER_ID, dispatcher
-from YoneRobot.modules.helper_funcs.extraction import extract_user
-from YoneRobot.modules.sql.users_sql import get_user_com_chats
+from Lucas import OWNER_ID, dispatcher
+from Lucas.modules.helper_funcs.extraction import extract_user
+from Lucas.modules.sql.users_sql import get_user_com_chats
 from telegram import Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import CallbackContext, CommandHandler, Filters
@@ -16,14 +16,14 @@ def get_user_common_chats(update: Update, context: CallbackContext):
     msg = update.effective_message
     user = extract_user(msg, args)
     if not user:
-        msg.reply_text("I share no common chats with the void.")
+        msg.reply_text("𝐈 𝐬𝐡𝐚𝐫𝐞 𝐧𝐨 𝐜𝐨𝐦𝐦𝐨𝐧 𝐜𝐡𝐚𝐭𝐬 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞 𝐯𝐨𝐢𝐝.")
         return
     common_list = get_user_com_chats(user)
     if not common_list:
-        msg.reply_text("No common chats with this user!")
+        msg.reply_text("𝐍𝐨 𝐜𝐨𝐦𝐦𝐨𝐧 𝐜𝐡𝐚𝐭𝐬 𝐰𝐢𝐭𝐡 𝐭𝐡𝐢𝐬 𝐮𝐬𝐞𝐫!")
         return
     name = bot.get_chat(user).first_name
-    text = f"<b>Common chats with {name}</b>\n"
+    text = f"<b>𝐂𝐨𝐦𝐦𝐨𝐧 𝐜𝐡𝐚𝐭𝐬 𝐰𝐢𝐭𝐡 {name}</b>\n"
     for chat in common_list:
         try:
             chat_name = bot.get_chat(chat).title
