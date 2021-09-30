@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String, UnicodeText, Integer, func, distinct
 
-from YoneRobot.modules.sql import BASE, SESSION
+from Lucas.modules.sql import BASE, SESSION
 
 
 class Approvals(BASE):
