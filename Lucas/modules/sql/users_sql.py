@@ -1,7 +1,7 @@
 import threading
 
-from YoneRobot import dispatcher
-from YoneRobot.modules.sql import BASE, SESSION
+from Lucas import dispatcher
+from Lucas.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,
