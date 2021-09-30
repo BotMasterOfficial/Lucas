@@ -1,4 +1,4 @@
-from YoneRobot import telethn as tbot
+from Lucas import telethn as tbot
 import os
 import urllib.request
 from datetime import datetime
@@ -11,8 +11,8 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-from YoneRobot import *
-from YoneRobot.events import register
+from Lucas import *
+from Lucas.events import register
 
 
 async def is_register_admin(chat, user):
@@ -33,7 +33,7 @@ async def _(event):
         return
     if event.is_group:
      if not (await is_register_admin(event.input_chat, event.message.sender_id)):
-       await event.reply("🚨 Need Admin Pewer.. You can't use this command.. But you can use in my pm")
+       await event.reply("⚠️ 𝐍𝐞𝐞𝐝 𝐀𝐝𝐦𝐢𝐧 𝐏𝐨𝐰𝐞𝐫.. 𝐘𝐨𝐮 𝐜𝐚𝐧'𝐭 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝.. 𝐁𝐮𝐭 𝐲𝐨𝐮 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐢𝐧 𝐦𝐲 𝐩𝐦 ")
        return
 
     start = datetime.now()
@@ -93,16 +93,16 @@ async def _(event):
 
 
 __help__ = """
-I can convert text to voice and voice to text..
- ❍ /tts <lang code>*:* Reply to any message to get text to speech output
- ❍ /stt*:* Type in reply to a voice message(support english only) to extract text from it.
-*Language Codes*
-`af,am,ar,az,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,en,eo,es,
-et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,hi,hmn,hr,ht,hu,hy,
-id,ig,is,it,iw,ja,jw,ka,kk,km,kn,ko,ku,ky,la,lb,lo,lt,lv,mg,mi,mk,
-ml,mn,mr,ms,mt,my,ne,nl,no,ny,pa,pl,ps,pt,ro,ru,sd,si,sk,sl,
-sm,sn,so,sq,sr,st,su,sv,sw,ta,te,tg,th,tl,tr,uk,ur,uz,
-vi,xh,yi,yo,zh,zh_CN,zh_TW,zu`
+𝐈 𝐜𝐚𝐧 𝐜𝐨𝐧𝐯𝐞𝐫𝐭 𝐭𝐞𝐱𝐭 𝐭𝐨 𝐯𝐨𝐢𝐜𝐞 𝐚𝐧𝐝 𝐯𝐨𝐢𝐜𝐞 𝐭𝐨 𝐭𝐞𝐱𝐭..
+⚫ /tts <𝐥𝐚𝐧𝐠 𝐜𝐨𝐝𝐞>*:* 𝐑𝐞𝐩𝐥𝐲 𝐭𝐨 𝐚𝐧𝐲 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐭𝐨 𝐠𝐞𝐭 𝐭𝐞𝐱𝐭 𝐭𝐨 𝐬𝐩𝐞𝐞𝐜𝐡 𝐨𝐮𝐭𝐩𝐮𝐭
+⚫ /stt*:* 𝐓𝐲𝐩𝐞 𝐢𝐧 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐚 𝐯𝐨𝐢𝐜𝐞 𝐦𝐞𝐬𝐬𝐚𝐠𝐞(𝐬𝐮𝐩𝐩𝐨𝐫𝐭 𝐞𝐧𝐠𝐥𝐢𝐬𝐡 𝐨𝐧𝐥𝐲) 𝐭𝐨 𝐞𝐱𝐭𝐫𝐚𝐜𝐭 𝐭𝐞𝐱𝐭 𝐟𝐫𝐨𝐦 𝐢𝐭.
+*𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞 𝐂𝐨𝐝𝐞𝐬*
+`𝐚𝐟,𝐚𝐦,𝐚𝐫,𝐚𝐳,𝐛𝐞,𝐛𝐠,𝐛𝐧,𝐛𝐬,𝐜𝐚,𝐜𝐞𝐛,𝐜𝐨,𝐜𝐬,𝐜𝐲,𝐝𝐚,𝐝𝐞,𝐞𝐥,𝐞𝐧,𝐞𝐨,𝐞𝐬,
+𝐞𝐭,𝐞𝐮,𝐟𝐚,𝐟𝐢,𝐟𝐫,𝐟𝐲,𝐠𝐚,𝐠𝐝,𝐠𝐥,𝐠𝐮,𝐡𝐚,𝐡𝐚𝐰,𝐡𝐢,𝐡𝐦𝐧,𝐡𝐫,𝐡𝐭,𝐡𝐮,𝐡𝐲,
+𝐢𝐝,𝐢𝐠,𝐢𝐬,𝐢𝐭,𝐢𝐰,𝐣𝐚,𝐣𝐰,𝐤𝐚,𝐤𝐤,𝐤𝐦,𝐤𝐧,𝐤𝐨,𝐤𝐮,𝐤𝐲,𝐥𝐚,𝐥𝐛,𝐥𝐨,𝐥𝐭,𝐥𝐯,𝐦𝐠,𝐦𝐢,𝐦𝐤,
+𝐦𝐥,𝐦𝐧,𝐦𝐫,𝐦𝐬,𝐦𝐭,𝐦𝐲,𝐧𝐞,𝐧𝐥,𝐧𝐨,𝐧𝐲,𝐩𝐚,𝐩𝐥,𝐩𝐬,𝐩𝐭,𝐫𝐨,𝐫𝐮,𝐬𝐝,𝐬𝐢,𝐬𝐤,𝐬𝐥,
+𝐬𝐦,𝐬𝐧,𝐬𝐨,𝐬𝐪,𝐬𝐫,𝐬𝐭,𝐬𝐮,𝐬𝐯,𝐬𝐰,𝐭𝐚,𝐭𝐞,𝐭𝐠,𝐭𝐡,𝐭𝐥,𝐭𝐫,𝐮𝐤,𝐮𝐫,𝐮𝐳,
+𝐯𝐢,𝐱𝐡,𝐲𝐢,𝐲𝐨,𝐳𝐡,𝐳𝐡_𝐂𝐍,𝐳𝐡_𝐓𝐖,𝐳𝐮`
 """
 
-__mod_name__ = "TTS/STT"
+__mod_name__ = "📝𝐓𝐓𝐒/𝐒𝐓𝐓📝"
