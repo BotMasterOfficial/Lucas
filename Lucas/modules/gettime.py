@@ -2,8 +2,8 @@ import datetime
 from typing import List
 
 import requests
-from YoneRobot import TIME_API_KEY, dispatcher
-from YoneRobot.modules.disable import DisableAbleCommandHandler
+from Lucas import TIME_API_KEY, dispatcher
+from Lucas.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
@@ -65,10 +65,10 @@ def gettime(update: Update, context: CallbackContext):
     try:
         query = message.text.strip().split(" ", 1)[1]
     except:
-        message.reply_text("Provide a country name/abbreviation/timezone to find.")
+        message.reply_text("𝐏𝐫𝐨𝐯𝐢𝐝𝐞 𝐚 𝐜𝐨𝐮𝐧𝐭𝐫𝐲 𝐧𝐚𝐦𝐞/𝐚𝐛𝐛𝐫𝐞𝐯𝐢𝐚𝐭𝐢𝐨𝐧/𝐭𝐢𝐦𝐞𝐳𝐨𝐧𝐞 𝐭𝐨 𝐟𝐢𝐧𝐝.")
         return
     send_message = message.reply_text(
-        f"Finding timezone info for <b>{query}</b>", parse_mode=ParseMode.HTML
+        f"𝐅𝐢𝐧𝐝𝐢𝐧𝐠 𝐭𝐢𝐦𝐞𝐳𝐨𝐧𝐞 𝐢𝐧𝐟𝐨 𝐟𝐨𝐫 <b>{query}</b>", parse_mode=ParseMode.HTML
     )
 
     query_timezone = query.lower()
@@ -79,8 +79,8 @@ def gettime(update: Update, context: CallbackContext):
 
     if not result:
         send_message.edit_text(
-            f"Timezone info not available for <b>{query}</b>\n"
-            '<b>All Timezones:</b> <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List here</a>',
+            f"𝐓𝐢𝐦𝐞𝐳𝐨𝐧𝐞 𝐢𝐧𝐟𝐨 𝐧𝐨𝐭 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐟𝐨𝐫 <b>{query}</b>\n"
+            '<b>𝐀𝐥𝐥 𝐓𝐢𝐦𝐞𝐳𝐨𝐧𝐞𝐬:</b> <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">𝐋𝐢𝐬𝐭 𝐡𝐞𝐫𝐞</a>',
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
         )
