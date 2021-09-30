@@ -1,5 +1,5 @@
 import requests
-from YoneRobot import CASH_API_KEY, dispatcher
+from Lucas import CASH_API_KEY, dispatcher
 from telegram import Update, ParseMode
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
@@ -13,7 +13,7 @@ def convert(update: Update, context: CallbackContext):
             orig_cur_amount = float(args[1])
 
         except ValueError:
-            update.effective_message.reply_text("Invalid Amount Of Currency")
+            update.effective_message.reply_text("𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐀𝐦𝐨𝐮𝐧𝐭 𝐎𝐟 𝐂𝐮𝐫𝐫𝐞𝐧𝐜𝐲")
             return
 
         orig_cur = args[2].upper()
