@@ -2,12 +2,12 @@ import random
 import threading
 from typing import Union
 
-from YoneRobot.modules.helper_funcs.msg_types import Types
-from YoneRobot.modules.sql import BASE, SESSION
+from Lucas.modules.helper_funcs.msg_types import Types
+from Lucas.modules.sql import BASE, SESSION
 from sqlalchemy import BigInteger, Boolean, Column, Integer, String, UnicodeText
 
-DEFAULT_WELCOME = "Hey {first}, how are you?"
-DEFAULT_GOODBYE = "Nice knowing ya!"
+DEFAULT_WELCOME = "𝐇𝐞𝐲 {first}, 𝐇𝐨𝐰 𝐚𝐫𝐞 𝐲𝐨𝐮?"
+DEFAULT_GOODBYE = "𝐍𝐢𝐜𝐞 𝐤𝐧𝐨𝐰𝐢𝐧𝐠 𝐲𝐨𝐮!"
 
 DEFAULT_WELCOME_MESSAGES = [
     "{first} is here!",  # Discord welcome messages copied
