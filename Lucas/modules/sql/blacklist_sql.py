@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import func, distinct, Column, String, UnicodeText, Integer
 
-from YoneRobot.modules.sql import SESSION, BASE
+from Lucas.modules.sql import SESSION, BASE
 
 
 class BlackListFilters(BASE):
