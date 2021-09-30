@@ -1,6 +1,6 @@
 from telethon.tl.types import InputMediaDice
 
-from YoneRobot.events import register
+from Lucas.events import register
 
 
 @register(pattern="^/dice(?: |$)(.*)")
@@ -65,12 +65,12 @@ async def _(event):
 
 
 __help__ = """
- *Play Game With Emojis:*
-  - /dice or /dice 1 to 6 any value
-  - /ball or /ball 1 to 5 any value
-  - /dart or /dart 1 to 6 any value
- Usage: hahaha just a magic.
- warning: you would be in trouble if you input any other value than mentioned.
+*𝐏𝐥𝐚𝐲 𝐆𝐚𝐦𝐞 𝐖𝐢𝐭𝐡 𝐄𝐦𝐨𝐣𝐢𝐬:*
+- /dice 𝐨𝐫 /𝐝𝐢𝐜𝐞 𝟏 𝐭𝐨 𝟔 𝐚𝐧𝐲 𝐯𝐚𝐥𝐮𝐞
+- /ball 𝐨𝐫 /𝐛𝐚𝐥𝐥 𝟏 𝐭𝐨 𝟓 𝐚𝐧𝐲 𝐯𝐚𝐥𝐮𝐞
+- /dart 𝐨𝐫 /𝐝𝐚𝐫𝐭 𝟏 𝐭𝐨 𝟔 𝐚𝐧𝐲 𝐯𝐚𝐥𝐮𝐞
+𝐔𝐬𝐚𝐠𝐞: 𝐡𝐚𝐡𝐚𝐡𝐚 𝐣𝐮𝐬𝐭 𝐚 𝐦𝐚𝐠𝐢𝐜.
+𝐰𝐚𝐫𝐧𝐢𝐧𝐠: 𝐲𝐨𝐮 𝐰𝐨𝐮𝐥𝐝 𝐛𝐞 𝐢𝐧 𝐭𝐫𝐨𝐮𝐛𝐥𝐞 𝐢𝐟 𝐲𝐨𝐮 𝐢𝐧𝐩𝐮𝐭 𝐚𝐧𝐲 𝐨𝐭𝐡𝐞𝐫 𝐯𝐚𝐥𝐮𝐞 𝐭𝐡𝐚𝐧 𝐦𝐞𝐧𝐭𝐢𝐨𝐧𝐞𝐝.
 """
 
-__mod_name__ = "Game"
+__mod_name__ = "🎮𝐆𝐚𝐦𝐞🎮"
