@@ -5,8 +5,8 @@ from telethon import events
 from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
-from YoneRobot import telethn, dispatcher
-from YoneRobot.modules.helper_funcs.chat_status import dev_plus
+from Lucas import telethn, dispatcher
+from Lucas.modules.helper_funcs.chat_status import dev_plus
 
 DEBUG_MODE = False
 
@@ -21,15 +21,15 @@ def debug(update: Update, context: CallbackContext):
     if len(args) > 1:
         if args[1] in ("yes", "on"):
             DEBUG_MODE = True
-            message.reply_text("Debug mode is now on.")
+            message.reply_text("𝐃𝐞𝐛𝐮𝐠 𝐦𝐨𝐝𝐞 𝐢𝐬 𝐧𝐨𝐰 𝐨𝐧.")
         elif args[1] in ("no", "off"):
             DEBUG_MODE = False
-            message.reply_text("Debug mode is now off.")
+            message.reply_text("𝐃𝐞𝐛𝐮𝐠 𝐦𝐨𝐝𝐞 𝐢𝐬 𝐧𝐨𝐰 𝐨𝐟𝐟.")
     else:
         if DEBUG_MODE:
-            message.reply_text("Debug mode is currently on.")
+            message.reply_text("𝐃𝐞𝐛𝐮𝐠 𝐦𝐨𝐝𝐞 𝐢𝐬 𝐜𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲 𝐨𝐧.")
         else:
-            message.reply_text("Debug mode is currently off.")
+            message.reply_text("𝐃𝐞𝐛𝐮𝐠 𝐦𝐨𝐝𝐞 𝐢𝐬 𝐜𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲 𝐨𝐟𝐟.")
 
 
 @telethn.on(events.NewMessage(pattern="[/!].*"))
