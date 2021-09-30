@@ -1,4 +1,4 @@
-#    Copyright (C) DevsExpo 2020-2021
+#    Copyright (C) @BotMasterOfficial 2020-2021
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
@@ -25,21 +25,21 @@ from google_trans_new import google_translator
 from telethon import events
 from telethon.tl.types import ChatBannedRights
 
-from YoneRobot import BOT_ID
-from YoneRobot.conf import get_int_key, get_str_key
+from Lucas import BOT_ID
+from Lucas.conf import get_int_key, get_str_key
 
-# from YoneRobot.db.mongo_helpers.nsfw_guard import add_chat, get_all_nsfw_chats, is_chat_in_db, rm_chat
-from YoneRobot.pyrogramee.telethonbasics import is_admin
-from YoneRobot.events import register
-from YoneRobot import MONGO_DB_URI 
+# from Lucas.db.mongo_helpers.nsfw_guard import add_chat, get_all_nsfw_chats, is_chat_in_db, rm_chat
+from Lucas.pyrogramee.telethonbasics import is_admin
+from Lucas.events import register
+from Lucas import MONGO_DB_URI 
 from pymongo import MongoClient
-from YoneRobot.modules.sql_extended.nsfw_watch_sql import (
+from Lucas.modules.sql_extended.nsfw_watch_sql import (
     add_nsfwatch,
     get_all_nsfw_enabled_chat,
     is_nsfwatch_indb,
     rmnsfwatch,
 )
-from YoneRobot import telethn as tbot
+from Lucas import telethn as tbot
 
 translator = google_translator()
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
@@ -48,7 +48,7 @@ MONGO_DB_URI = get_str_key("MONGO_DB_URI")
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["yonerobot"]
+db = client["Lucas"]
 
 async def is_nsfw(event):
     lmao = event
@@ -87,11 +87,11 @@ async def is_nsfw(event):
 @tbot.on(events.NewMessage(pattern="/gshield (.*)"))
 async def nsfw_watch(event):
     if not event.is_group:
-        await event.reply("You Can Only Nsfw Watch in Groups.")
+        await event.reply("𝐘𝐨𝐮 𝐂𝐚𝐧 𝐎𝐧𝐥𝐲 𝐍𝐬𝐟𝐰 𝐖𝐚𝐭𝐜𝐡 𝐢𝐧 𝐆𝐫𝐨𝐮𝐩𝐬.")
         return
     input_str = event.pattern_match.group(1)
     if not await is_admin(event, BOT_ID):
-        await event.reply("`I Should Be Admin To Do This!`")
+        await event.reply("`𝐈 𝐒𝐡𝐨𝐮𝐥𝐝 𝐁𝐞 𝐀𝐝𝐦𝐢𝐧 𝐓𝐨 𝐃𝐨 𝐓𝐡𝐢𝐬!`")
         return
     if await is_admin(event, event.message.sender_id):
         if (
@@ -101,11 +101,11 @@ async def nsfw_watch(event):
             or input_str == "enable"
         ):
             if is_nsfwatch_indb(str(event.chat_id)):
-                await event.reply("`This Chat Has Already Enabled Nsfw Watch.`")
+                await event.reply("`𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭 𝐇𝐚𝐬 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐄𝐧𝐚𝐛𝐥𝐞𝐝 𝐍𝐬𝐟𝐰 𝐖𝐚𝐭𝐜𝐡.`")
                 return
             add_nsfwatch(str(event.chat_id))
             await event.reply(
-                f"**Added Chat {event.chat.title} With Id {event.chat_id} To Database. This Groups Nsfw Contents Will Be Deleted**"
+                f"**𝐀𝐝𝐝𝐞𝐝 𝐂𝐡𝐚𝐭 {event.chat.title} 𝐖𝐢𝐭𝐡 𝐈𝐝 {event.chat_id} 𝐓𝐨 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞. 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩𝐬 𝐍𝐬𝐟𝐰 𝐂𝐨𝐧𝐭𝐞𝐧𝐭𝐬 𝐖𝐢𝐥𝐥 𝐁𝐞 𝐃𝐞𝐥𝐞𝐭𝐞𝐝**"
             )
         elif (
             input_str == "off"
@@ -114,18 +114,18 @@ async def nsfw_watch(event):
             or input_str == "disable"
         ):
             if not is_nsfwatch_indb(str(event.chat_id)):
-                await event.reply("This Chat Has Not Enabled Nsfw Watch.")
+                await event.reply("𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭 𝐇𝐚𝐬 𝐍𝐨𝐭 𝐄𝐧𝐚𝐛𝐥𝐞𝐝 𝐍𝐬𝐟𝐰 𝐖𝐚𝐭𝐜𝐡.")
                 return
             rmnsfwatch(str(event.chat_id))
             await event.reply(
-                f"**Removed Chat {event.chat.title} With Id {event.chat_id} From Nsfw Watch**"
+                f"**𝐑𝐞𝐦𝐨𝐯𝐞𝐝 𝐂𝐡𝐚𝐭 {event.chat.title} 𝐖𝐢𝐭𝐡 𝐈𝐝 {event.chat_id} 𝐅𝐫𝐨𝐦 𝐍𝐬𝐟𝐰 𝐖𝐚𝐭𝐜𝐡**"
             )
         else:
             await event.reply(
-                "I undestand `/nsfwguardian on` and `/nsfwguardian off` only"
+                "𝐈 𝐮𝐧𝐝𝐞𝐬𝐭𝐚𝐧𝐝 `/𝐧𝐬𝐟𝐰𝐠𝐮𝐚𝐫𝐝𝐢𝐚𝐧 𝐨𝐧` 𝐚𝐧𝐝 `/𝐧𝐬𝐟𝐰𝐠𝐮𝐚𝐫𝐝𝐢𝐚𝐧 𝐨𝐟𝐟` 𝐨𝐧𝐥𝐲"
             )
     else:
-        await event.reply("`You Should Be Admin To Do This!`")
+        await event.reply("`𝐘𝐨𝐮 𝐒𝐡𝐨𝐮𝐥𝐝 𝐁𝐞 𝐀𝐝𝐦𝐢𝐧 𝐓𝐨 𝐃𝐨 𝐓𝐡𝐢𝐬!`")
         return
 
 
@@ -148,7 +148,7 @@ async def ws(event):
         await event.delete()
         st = sender.first_name
         hh = sender.id
-        final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Yone deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By YoneAI` \n**#GROUP_GUARDIAN** "
+        final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Lucas deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By LucasAI` \n**#GROUP_GUARDIAN** "
         dev = await event.respond(final)
         await asyncio.sleep(10)
         await dev.delete()
@@ -159,27 +159,27 @@ async def ws(event):
 @pbot.on_message(filters.command("nsfwguardian") & ~filters.edited & ~filters.bot)
 async def add_nsfw(client, message):
     if len(await member_permissions(message.chat.id, message.from_user.id)) < 1:
-        await message.reply_text("**You don't have enough permissions**")
+        await message.reply_text("**𝐘𝐨𝐮 𝐝𝐨𝐧'𝐭 𝐡𝐚𝐯𝐞 𝐞𝐧𝐨𝐮𝐠𝐡 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧𝐬**")
         return
     status = message.text.split(None, 1)[1] 
     if status == "on" or status == "ON" or status == "enable":
-        pablo = await message.reply("`Processing..`")
+        pablo = await message.reply("`𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠...`")
         if is_chat_in_db(message.chat.id):
-            await pablo.edit("This Chat is Already In My DB")
+            await pablo.edit("𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭 𝐢𝐬 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐈𝐧 𝐌𝐲 𝐃𝐁")
             return
         me = await client.get_me()
         add_chat(message.chat.id)
-        await pablo.edit("Successfully Added Chat To NSFW Watch.")
+        await pablo.edit("𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐀𝐝𝐝𝐞𝐝 𝐂𝐡𝐚𝐭 𝐓𝐨 𝐍𝐒𝐅𝐖 𝐖𝐚𝐭𝐜𝐡.")
         
     elif status == "off" or status=="OFF" or status == "disable":
-        pablo = await message.reply("`Processing..`")
+        pablo = await message.reply("`𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠...`")
         if not is_chat_in_db(message.chat.id):
-            await pablo.edit("This Chat is Not in dB.")
+            await pablo.edit("𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭 𝐢𝐬 𝐍𝐨𝐭 𝐢𝐧 𝐃𝐁.")
             return
         rm_chat(message.chat.id)
-        await pablo.edit("Successfully Removed Chat From NSFW Watch service")
+        await pablo.edit("𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐑𝐞𝐦𝐨𝐯𝐞𝐝 𝐂𝐡𝐚𝐭 𝐅𝐫𝐨𝐦 𝐍𝐒𝐅𝐖 𝐖𝐚𝐭𝐜𝐡 𝐬𝐞𝐫𝐯𝐢𝐜𝐞")
     else:
-        await message.reply(" I undestand only `/nsfwguardian on` or `/nsfwguardian off` only")
+        await message.reply(" 𝐈 𝐮𝐧𝐝𝐞𝐬𝐭𝐚𝐧𝐝 𝐨𝐧𝐥𝐲 `/𝐧𝐬𝐟𝐰𝐠𝐮𝐚𝐫𝐝𝐢𝐚𝐧 𝐨𝐧` 𝐨𝐫 `/𝐧𝐬𝐟𝐰𝐠𝐮𝐚𝐫𝐝𝐢𝐚𝐧 𝐨𝐟𝐟` 𝐨𝐧𝐥𝐲")
         
 @pbot.on_message(filters.incoming & filters.media & ~filters.private & ~filters.channel & ~filters.bot)
 async def nsfw_watch(client, message):
@@ -210,15 +210,15 @@ async def nsfw_watch(client, message):
             Escobar = midhun.id
         await client.send_message(
             message.chat.id,
-            f"**NSFW DETECTED**\n\n{hehe}'s message contain NSFW content.. So, Yone deleted the message\n\n **Nsfw Sender - User / Bot :** `{Escobar}` \n**Chat Title:** `{ctitle}` \n\n`⚔️Automatic Detections Powered By YoneAI` \n**#GROUP_GUARDIAN** ",
+            f"**NSFW DETECTED**\n\n{hehe}'s message contain NSFW content.. So, Lucas deleted the message\n\n **Nsfw Sender - User / Bot :** `{Escobar}` \n**Chat Title:** `{ctitle}` \n\n`⚔️Automatic Detections Powered By LucasAI` \n**#GROUP_GUARDIAN** ",
         )
         message.continue_propagation()
 """
 
 
-# This Module is ported from https://github.com/MissJuliaRobot/MissJuliaRobot
-# This hardwork was completely done by MissJuliaRobot
-# Full Credits goes to MissJuliaRobot
+# This Module is ported from https://github.com/BotMasterOfficial/Lucas
+# This hardwork was completely done by Lucas
+# Full Credits goes to Lucas
 
 
 approved_users = db.approve
@@ -234,11 +234,11 @@ async def profanity(event):
     if event.fwd_from:
         return
     if not event.is_group:
-        await event.reply("You Can Only profanity in Groups.")
+        await event.reply("𝐘𝐨𝐮 𝐂𝐚𝐧 𝐎𝐧𝐥𝐲 𝐩𝐫𝐨𝐟𝐚𝐧𝐢𝐭𝐲 𝐢𝐧 𝐆𝐫𝐨𝐮𝐩𝐬.")
         return
     event.pattern_match.group(1)
     if not await is_admin(event, BOT_ID):
-        await event.reply("`I Should Be Admin To Do This!`")
+        await event.reply("`𝐈 𝐒𝐡𝐨𝐮𝐥𝐝 𝐁𝐞 𝐀𝐝𝐦𝐢𝐧 𝐓𝐨 𝐃𝐨 𝐓𝐡𝐢𝐬!`")
         return
     if await is_admin(event, event.message.sender_id):
         input = event.pattern_match.group(1)
@@ -247,11 +247,11 @@ async def profanity(event):
             for c in chats:
                 if event.chat_id == c["id"]:
                     await event.reply(
-                        "Please provide some input yes or no.\n\nCurrent setting is : **on**"
+                        "𝐏𝐥𝐞𝐚𝐬𝐞 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐬𝐨𝐦𝐞 𝐢𝐧𝐩𝐮𝐭 𝐲𝐞𝐬 𝐨𝐫 𝐧𝐨.\𝐧\𝐧𝐂𝐮𝐫𝐫𝐞𝐧𝐭 𝐬𝐞𝐭𝐭𝐢𝐧𝐠 𝐢𝐬 : **𝐨𝐧**"
                     )
                     return
             await event.reply(
-                "Please provide some input yes or no.\n\nCurrent setting is : **off**"
+                "𝐏𝐥𝐞𝐚𝐬𝐞 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐬𝐨𝐦𝐞 𝐢𝐧𝐩𝐮𝐭 𝐲𝐞𝐬 𝐨𝐫 𝐧𝐨.\𝐧\𝐧𝐂𝐮𝐫𝐫𝐞𝐧𝐭 𝐬𝐞𝐭𝐭𝐢𝐧𝐠 𝐢𝐬 : **𝐨𝐟𝐟**"
             )
             return
         if input == "on":
@@ -260,25 +260,25 @@ async def profanity(event):
                 for c in chats:
                     if event.chat_id == c["id"]:
                         await event.reply(
-                            "Profanity filter is already activated for this chat."
+                            "𝐏𝐫𝐨𝐟𝐚𝐧𝐢𝐭𝐲 𝐟𝐢𝐥𝐭𝐞𝐫 𝐢𝐬 𝐚𝐥𝐫𝐞𝐚𝐝𝐲 𝐚𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝 𝐟𝐨𝐫 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭."
                         )
                         return
                 spammers.insert_one({"id": event.chat_id})
-                await event.reply("Profanity filter turned on for this chat.")
+                await event.reply("𝐏𝐫𝐨𝐟𝐚𝐧𝐢𝐭𝐲 𝐟𝐢𝐥𝐭𝐞𝐫 𝐭𝐮𝐫𝐧𝐞𝐝 𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭.")
         if input == "off":
             if event.is_group:
                 chats = spammers.find({})
                 for c in chats:
                     if event.chat_id == c["id"]:
                         spammers.delete_one({"id": event.chat_id})
-                        await event.reply("Profanity filter turned off for this chat.")
+                        await event.reply("𝐏𝐫𝐨𝐟𝐚𝐧𝐢𝐭𝐲 𝐟𝐢𝐥𝐭𝐞𝐫 𝐭𝐮𝐫𝐧𝐞𝐝 𝐨𝐟𝐟 𝐟𝐨𝐫 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭.")
                         return
-            await event.reply("Profanity filter isn't turned on for this chat.")
+            await event.reply("𝐏𝐫𝐨𝐟𝐚𝐧𝐢𝐭𝐲 𝐟𝐢𝐥𝐭𝐞𝐫 𝐢𝐬𝐧'𝐭 𝐭𝐮𝐫𝐧𝐞𝐝 𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭.")
         if not input == "on" and not input == "off":
-            await event.reply("I only understand by on or off")
+            await event.reply("𝐈 𝐨𝐧𝐥𝐲 𝐮𝐧𝐝𝐞𝐫𝐬𝐭𝐚𝐧𝐝 𝐛𝐲 𝐨𝐧 𝐨𝐫 𝐨𝐟𝐟")
             return
     else:
-        await event.reply("`You Should Be Admin To Do This!`")
+        await event.reply("`𝐘𝐨𝐮 𝐒𝐡𝐨𝐮𝐥𝐝 𝐁𝐞 𝐀𝐝𝐦𝐢𝐧 𝐓𝐨 𝐃𝐨 𝐓𝐡𝐢𝐬!`")
         return
 
 
@@ -287,11 +287,11 @@ async def profanity(event):
     if event.fwd_from:
         return
     if not event.is_group:
-        await event.reply("You Can Only enable global mode Watch in Groups.")
+        await event.reply("𝐘𝐨𝐮 𝐂𝐚𝐧 𝐎𝐧𝐥𝐲 𝐞𝐧𝐚𝐛𝐥𝐞 𝐠𝐥𝐨𝐛𝐚𝐥 𝐦𝐨𝐝𝐞 𝐖𝐚𝐭𝐜𝐡 𝐢𝐧 𝐆𝐫𝐨𝐮𝐩𝐬.")
         return
     event.pattern_match.group(1)
     if not await is_admin(event, BOT_ID):
-        await event.reply("`I Should Be Admin To Do This!`")
+        await event.reply("`𝐈 𝐒𝐡𝐨𝐮𝐥𝐝 𝐁𝐞 𝐀𝐝𝐦𝐢𝐧 𝐓𝐨 𝐃𝐨 𝐓𝐡𝐢𝐬!`")
         return
     if await is_admin(event, event.message.sender_id):
 
@@ -301,11 +301,11 @@ async def profanity(event):
             for c in chats:
                 if event.chat_id == c["id"]:
                     await event.reply(
-                        "Please provide some input yes or no.\n\nCurrent setting is : **on**"
+                        "𝐏𝐥𝐞𝐚𝐬𝐞 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐬𝐨𝐦𝐞 𝐢𝐧𝐩𝐮𝐭 𝐲𝐞𝐬 𝐨𝐫 𝐧𝐨.\𝐧\𝐧𝐂𝐮𝐫𝐫𝐞𝐧𝐭 𝐬𝐞𝐭𝐭𝐢𝐧𝐠 𝐢𝐬 : **𝐨𝐧**"
                     )
                     return
             await event.reply(
-                "Please provide some input yes or no.\n\nCurrent setting is : **off**"
+                "𝐏𝐥𝐞𝐚𝐬𝐞 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐬𝐨𝐦𝐞 𝐢𝐧𝐩𝐮𝐭 𝐲𝐞𝐬 𝐨𝐫 𝐧𝐨.\𝐧\𝐧𝐂𝐮𝐫𝐫𝐞𝐧𝐭 𝐬𝐞𝐭𝐭𝐢𝐧𝐠 𝐢𝐬 : **𝐨𝐟𝐟**"
             )
             return
         if input == "on":
@@ -314,25 +314,25 @@ async def profanity(event):
                 for c in chats:
                     if event.chat_id == c["id"]:
                         await event.reply(
-                            "Global mode is already activated for this chat."
+                            "𝐆𝐥𝐨𝐛𝐚𝐥 𝐦𝐨𝐝𝐞 𝐢𝐬 𝐚𝐥𝐫𝐞𝐚𝐝𝐲 𝐚𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝 𝐟𝐨𝐫 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭."
                         )
                         return
                 globalchat.insert_one({"id": event.chat_id})
-                await event.reply("Global mode turned on for this chat.")
+                await event.reply("𝐆𝐥𝐨𝐛𝐚𝐥 𝐦𝐨𝐝𝐞 𝐭𝐮𝐫𝐧𝐞𝐝 𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭.")
         if input == "off":
             if event.is_group:
                 chats = globalchat.find({})
                 for c in chats:
                     if event.chat_id == c["id"]:
                         globalchat.delete_one({"id": event.chat_id})
-                        await event.reply("Global mode turned off for this chat.")
+                        await event.reply("𝐆𝐥𝐨𝐛𝐚𝐥 𝐦𝐨𝐝𝐞 𝐭𝐮𝐫𝐧𝐞𝐝 𝐨𝐟𝐟 𝐟𝐨𝐫 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭.")
                         return
-            await event.reply("Global mode isn't turned on for this chat.")
+            await event.reply("𝐆𝐥𝐨𝐛𝐚𝐥 𝐦𝐨𝐝𝐞 𝐢𝐬𝐧'𝐭 𝐭𝐮𝐫𝐧𝐞𝐝 𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐢𝐬 𝐜𝐡𝐚𝐭.")
         if not input == "on" and not input == "off":
-            await event.reply("I only understand by on or off")
+            await event.reply("𝐈 𝐨𝐧𝐥𝐲 𝐮𝐧𝐝𝐞𝐫𝐬𝐭𝐚𝐧𝐝 𝐛𝐲 𝐨𝐧 𝐨𝐫 𝐨𝐟𝐟")
             return
     else:
-        await event.reply("`You Should Be Admin To Do This!`")
+        await event.reply("`𝐘𝐨𝐮 𝐒𝐡𝐨𝐮𝐥𝐝 𝐁𝐞 𝐀𝐝𝐦𝐢𝐧 𝐓𝐨 𝐃𝐨 𝐓𝐡𝐢𝐬!`")
         return
 
 
@@ -367,7 +367,7 @@ async def del_profanity(event):
                     await event.delete()
                     st = sender.first_name
                     hh = sender.id
-                    final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Yone deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By YoneAI` \n**#GROUP_GUARDIAN** "
+                    final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Lucas deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By LucasAI` \n**#GROUP_GUARDIAN** "
                     dev = await event.respond(final)
                     await asyncio.sleep(10)
                     await dev.delete()
@@ -429,15 +429,14 @@ async def del_profanity(event):
 #
 
 __help__ = """
-<b> Group Guardian: </b>
-✪ Yone can protect your group from NSFW senders, Slag word users and also can force members to use English
+<b>✪ 𝐆𝐫𝐨𝐮𝐩 𝐆𝐮𝐚𝐫𝐝𝐢𝐚𝐧 ✪:</b>
+✪ 𝐋𝐮𝐜𝐚𝐬 𝐜𝐚𝐧 𝐩𝐫𝐨𝐭𝐞𝐜𝐭 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐟𝐫𝐨𝐦 𝐍𝐒𝐅𝐖 𝐬𝐞𝐧𝐝𝐞𝐫𝐬, 𝐒𝐥𝐚𝐠 𝐰𝐨𝐫𝐝 𝐮𝐬𝐞𝐫𝐬 𝐚𝐧𝐝 𝐚𝐥𝐬𝐨 𝐜𝐚𝐧 𝐟𝐨𝐫𝐜𝐞 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐭𝐨 𝐮𝐬𝐞 𝐄𝐧𝐠𝐥𝐢𝐬𝐡
 
-<b>Commmands</b>
- - /gshield <i>on/off</i> - Enable|Disable Porn cleaning
- - /globalmode <i>on/off</i> - Enable|Disable English only mode
- - /profanity <i>on/off</i> - Enable|Disable slag word cleaning
+<b>𝐂𝐨𝐦𝐦𝐦𝐚𝐧𝐝𝐬</b>
+⚫ - /gshield <𝐢>𝐨𝐧/𝐨𝐟𝐟</𝐢> - 𝐄𝐧𝐚𝐛𝐥𝐞|𝐃𝐢𝐬𝐚𝐛𝐥𝐞 𝐏𝐨𝐫𝐧 𝐜𝐥𝐞𝐚𝐧𝐢𝐧𝐠
+⚫ - /globalmode <𝐢>𝐨𝐧/𝐨𝐟𝐟</𝐢> - 𝐄𝐧𝐚𝐛𝐥𝐞|𝐃𝐢𝐬𝐚𝐛𝐥𝐞 𝐄𝐧𝐠𝐥𝐢𝐬𝐡 𝐨𝐧𝐥𝐲 𝐦𝐨𝐝𝐞
+⚫ - /profanity <𝐢>𝐨𝐧/𝐨𝐟𝐟</𝐢> - 𝐄𝐧𝐚𝐛𝐥𝐞|𝐃𝐢𝐬𝐚𝐛𝐥𝐞 𝐬𝐥𝐚𝐠 𝐰𝐨𝐫𝐝 𝐜𝐥𝐞𝐚𝐧𝐢𝐧𝐠
  
-Note: Special credits goes to Julia project and Friday Userbot
- 
+𝐍𝐨𝐭𝐞: 𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐜𝐫𝐞𝐝𝐢𝐭𝐬 𝐠𝐨𝐞𝐬 𝐭𝐨 @BotMasterOfficial
 """
-__mod_name__ = "Shield"
+__mod_name__ = "🛡️𝐒𝐡𝐢𝐞𝐥𝐝🛡️"
