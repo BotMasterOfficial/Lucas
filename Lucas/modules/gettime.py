@@ -43,14 +43,14 @@ def generate_time(to_find: str, findtype: List[str]) -> str:
 
     try:
         result = (
-            f"<b>Country:</b> <code>{country_name}</code>\n"
-            f"<b>Zone Name:</b> <code>{country_zone}</code>\n"
-            f"<b>Country Code:</b> <code>{country_code}</code>\n"
-            f"<b>Daylight saving:</b> <code>{daylight_saving}</code>\n"
-            f"<b>Day:</b> <code>{current_day}</code>\n"
-            f"<b>Current Time:</b> <code>{current_time}</code>\n"
-            f"<b>Current Date:</b> <code>{current_date}</code>\n"
-            '<b>Timezones:</b> <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List here</a>'
+            f"<b>𝐂𝐨𝐮𝐧𝐭𝐫𝐲:</b> <code>{country_name}</code>\n"
+            f"<b>𝐙𝐨𝐧𝐞 𝐍𝐚𝐦𝐞:</b> <code>{country_zone}</code>\n"
+            f"<b>𝐂𝐨𝐮𝐧𝐭𝐫𝐲 𝐂𝐨𝐝𝐞:</b> <code>{country_code}</code>\n"
+            f"<b>𝐃𝐚𝐲𝐥𝐢𝐠𝐡𝐭 𝐬𝐚𝐯𝐢𝐧𝐠:</b> <code>{daylight_saving}</code>\n"
+            f"<b>𝐃𝐚𝐲:</b> <code>{current_day}</code>\n"
+            f"<b>𝐂𝐮𝐫𝐫𝐞𝐧𝐭 𝐓𝐢𝐦𝐞:</b> <code>{current_time}</code>\n"
+            f"<b>𝐂𝐮𝐫𝐫𝐞𝐧𝐭 𝐃𝐚𝐭𝐞:</b> <code>{current_date}</code>\n"
+            '<b>𝐓𝐢𝐦𝐞𝐳𝐨𝐧𝐞𝐬:</b> <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List here</a>'
         )
     except:
         result = None
