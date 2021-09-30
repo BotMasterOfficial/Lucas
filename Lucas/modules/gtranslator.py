@@ -3,8 +3,8 @@ from google_trans_new import LANGUAGES, google_translator
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
-from YoneRobot import dispatcher
-from YoneRobot.modules.disable import DisableAbleCommandHandler
+from Lucas import dispatcher
+from Lucas.modules.disable import DisableAbleCommandHandler
 
 
 @run_async
@@ -91,12 +91,12 @@ def totranslate(update: Update, context: CallbackContext):
 
 
 __help__ = """
- ❍ /tr or /tl (language code) as reply to a long message
-*Example:* 
- ❍ /tr en*:* translates something to english
- ❍ /tr hi-en*:* translates hindi to english
+⚫ /tr 𝐨𝐫 /tl (𝐥𝐚𝐧𝐠𝐮𝐚𝐠𝐞 𝐜𝐨𝐝𝐞) 𝐚𝐬 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐚 𝐥𝐨𝐧𝐠 𝐦𝐞𝐬𝐬𝐚𝐠𝐞
+*𝐄𝐱𝐚𝐦𝐩𝐥𝐞:* 
+⚫ /tr en*:* 𝐭𝐫𝐚𝐧𝐬𝐥𝐚𝐭𝐞𝐬 𝐬𝐨𝐦𝐞𝐭𝐡𝐢𝐧𝐠 𝐭𝐨 𝐞𝐧𝐠𝐥𝐢𝐬𝐡
+⚫ /tr hi-en*:* 𝐭𝐫𝐚𝐧𝐬𝐥𝐚𝐭𝐞𝐬 𝐡𝐢𝐧𝐝𝐢 𝐭𝐨 𝐞𝐧𝐠𝐥𝐢𝐬𝐡
 
-*Language Codes*
+*𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲 𝗖𝗼𝗱𝗲𝘀*
 `af,am,ar,az,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,en,eo,es,
 et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,hi,hmn,hr,ht,hu,hy,
 id,ig,is,it,iw,ja,jw,ka,kk,km,kn,ko,ku,ky,la,lb,lo,lt,lv,mg,mi,mk,
@@ -109,6 +109,6 @@ TRANSLATE_HANDLER = DisableAbleCommandHandler(["tr", "tl"], totranslate)
 
 dispatcher.add_handler(TRANSLATE_HANDLER)
 
-__mod_name__ = "G-Trans"
+__mod_name__ = "👀𝗚-𝗧𝗿𝗮𝗻𝘀👀"
 __command_list__ = ["tr", "tl"]
 __handlers__ = [TRANSLATE_HANDLER]
