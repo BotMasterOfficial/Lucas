@@ -2,7 +2,7 @@ from time import perf_counter
 from functools import wraps
 from cachetools import TTLCache
 from threading import RLock
-from YoneRobot import (
+from Lucas import (
     DEL_CMDS,
     DEV_USERS,
     DRAGONS,
@@ -114,8 +114,8 @@ def dev_plus(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "This is a developer restricted command."
-                " You do not have permissions to run this."
+                "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐚 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 𝐫𝐞𝐬𝐭𝐫𝐢𝐜𝐭𝐞𝐝 𝐜𝐨𝐦𝐦𝐚𝐧𝐝."
+                "𝐘𝐨𝐮 𝐝𝐨 𝐧𝐨𝐭 𝐡𝐚𝐯𝐞 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧𝐬 𝐭𝐨 𝐫𝐮𝐧 𝐭𝐡𝐢𝐬."
             )
 
     return is_dev_plus_func
@@ -139,7 +139,7 @@ def sudo_plus(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "Who dis non-admin telling me what to do? You want a punch?"
+                "𝐖𝐡𝐨 𝐝𝐢𝐬 𝐧𝐨𝐧-𝐚𝐝𝐦𝐢𝐧 𝐭𝐞𝐥𝐥𝐢𝐧𝐠 𝐦𝐞 𝐰𝐡𝐚𝐭 𝐭𝐨 𝐝𝐨? 𝐘𝐨𝐮 𝐰𝐚𝐧𝐭 𝐚 𝐩𝐮𝐧𝐜𝐡?"
             )
 
     return is_sudo_plus_func
@@ -176,7 +176,7 @@ def whitelist_plus(func):
             return func(update, context, *args, **kwargs)
         else:
             update.effective_message.reply_text(
-                f"You don't have access to use this.\nVisit @{SUPPORT_CHAT}"
+                f"𝐘𝐨𝐮 𝐝𝐨𝐧'𝐭 𝐡𝐚𝐯𝐞 𝐚𝐜𝐜𝐞𝐬𝐬 𝐭𝐨 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬.\nVisit @{SUPPORT_CHAT}"
             )
 
     return is_whitelist_plus_func
@@ -200,7 +200,7 @@ def user_admin(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "Who dis non-admin telling me what to do? You want a punch?"
+                "𝐖𝐡𝐨 𝐝𝐢𝐬 𝐧𝐨𝐧-𝐚𝐝𝐦𝐢𝐧 𝐭𝐞𝐥𝐥𝐢𝐧𝐠 𝐦𝐞 𝐰𝐡𝐚𝐭 𝐭𝐨 𝐝𝐨? 𝐘𝐨𝐮 𝐰𝐚𝐧𝐭 𝐚 𝐩𝐮𝐧𝐜𝐡?"
             )
 
     return is_admin
@@ -252,9 +252,9 @@ def bot_admin(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            not_admin = "I'm not admin! - REEEEEE"
+            not_admin = "𝐈 𝐚𝐦 𝐧𝐨𝐭 𝐚𝐝𝐦𝐢𝐧! - 𝐎𝐩𝐬𝐬𝐬𝐬"
         else:
-            not_admin = f"I'm not admin in <b>{update_chat_title}</b>! - REEEEEE"
+            not_admin = f"𝐈 𝐚𝐦 𝐧𝐨𝐭 𝐚𝐝𝐦𝐢𝐧 𝐢𝐧 <b>{update_chat_title}</b>! - 𝐎𝐩𝐬𝐬𝐬𝐬"
 
         if is_bot_admin(chat, bot.id):
             return func(update, context, *args, **kwargs)
@@ -366,7 +366,7 @@ def user_can_ban(func):
             and user not in [777000, 1087968824]
         ):
             update.effective_message.reply_text(
-                "😹 Sorry You can't do that"
+                "😹 𝐒𝐨𝐫𝐫𝐲 𝐘𝐨𝐮 𝐜𝐚𝐧'𝐭 𝐝𝐨 𝐭𝐡𝐚𝐭"
             )
             return ""
         return func(update, context, *args, **kwargs)
@@ -392,7 +392,7 @@ def connection_status(func):
         else:
             if update.effective_message.chat.type == "private":
                 update.effective_message.reply_text(
-                    "Send /connect in a group that you and I have in common first."
+                    "𝐒𝐞𝐧𝐝 /𝐜𝐨𝐧𝐧𝐞𝐜𝐭 𝐢𝐧 𝐚 𝐠𝐫𝐨𝐮𝐩 𝐭𝐡𝐚𝐭 𝐲𝐨𝐮 𝐚𝐧𝐝 𝐈 𝐡𝐚𝐯𝐞 𝐢𝐧 𝐜𝐨𝐦𝐦𝐨𝐧 𝐟𝐢𝐫𝐬𝐭."
                 )
                 return connected_status
 
@@ -402,6 +402,6 @@ def connection_status(func):
 
 
 # Workaround for circular import with connection.py
-from YoneRobot.modules import connection
+from Lucas.modules import connection
 
 connected = connection.connected
