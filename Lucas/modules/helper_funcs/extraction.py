@@ -1,7 +1,7 @@
 from typing import List, Optional
 
-from YoneRobot import LOGGER
-from YoneRobot.modules.users import get_user_id
+from Lucas import LOGGER
+from Lucas.modules.users import get_user_id
 from telegram import Message, MessageEntity
 from telegram.error import BadRequest
 
@@ -47,8 +47,8 @@ def extract_user_and_text(
         user_id = get_user_id(user)
         if not user_id:
             message.reply_text(
-                "No idea who this user is. You'll be able to interact with them if "
-                "you reply to that person's message instead, or forward one of that user's messages."
+                "𝐍𝐨 𝐢𝐝𝐞𝐚 𝐰𝐡𝐨 𝐭𝐡𝐢𝐬 𝐮𝐬𝐞𝐫 𝐢𝐬. 𝐘𝐨𝐮'𝐥𝐥 𝐛𝐞 𝐚𝐛𝐥𝐞 𝐭𝐨 𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞𝐦 𝐢𝐟 "
+                "𝐘𝐨𝐮 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐭𝐡𝐚𝐭 𝐩𝐞𝐫𝐬𝐨𝐧'𝐬 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐢𝐧𝐬𝐭𝐞𝐚𝐝, 𝐨𝐫 𝐟𝐨𝐫𝐰𝐚𝐫𝐝 𝐨𝐧𝐞 𝐨𝐟 𝐭𝐡𝐚𝐭 𝐮𝐬𝐞𝐫'𝐬 𝐦𝐞𝐬𝐬𝐚𝐠𝐞𝐬."
             )
             return None, None
 
@@ -75,9 +75,9 @@ def extract_user_and_text(
     except BadRequest as excp:
         if excp.message in ("User_id_invalid", "Chat not found"):
             message.reply_text(
-                "I don't seem to have interacted with this user before - please forward a message from "
-                "them to give me control! (like a voodoo doll, I need a piece of them to be able "
-                "to execute certain commands...)"
+                "𝐈 𝐝𝐨𝐧'𝐭 𝐬𝐞𝐞𝐦 𝐭𝐨 𝐡𝐚𝐯𝐞 𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐞𝐝 𝐰𝐢𝐭𝐡 𝐭𝐡𝐢𝐬 𝐮𝐬𝐞𝐫 𝐛𝐞𝐟𝐨𝐫𝐞 - 𝐩𝐥𝐞𝐚𝐬𝐞 𝐟𝐨𝐫𝐰𝐚𝐫𝐝 𝐚 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐟𝐫𝐨𝐦 "
+                "𝐭𝐡𝐞𝐦 𝐭𝐨 𝐠𝐢𝐯𝐞 𝐦𝐞 𝐜𝐨𝐧𝐭𝐫𝐨𝐥! (𝐥𝐢𝐤𝐞 𝐚 𝐯𝐨𝐨𝐝𝐨𝐨 𝐝𝐨𝐥𝐥, 𝐈 𝐧𝐞𝐞𝐝 𝐚 𝐩𝐢𝐞𝐜𝐞 𝐨𝐟 𝐭𝐡𝐞𝐦 𝐭𝐨 𝐛𝐞 𝐚𝐛𝐥𝐞 "
+                "𝐭𝐨 𝐞𝐱𝐞𝐜𝐮𝐭𝐞 𝐜𝐞𝐫𝐭𝐚𝐢𝐧 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬...)"
             )
         else:
             LOGGER.exception("Exception %s on user %s", excp.message, user_id)
@@ -121,8 +121,8 @@ def extract_unt_fedban(
         user_id = get_user_id(user)
         if not user_id and not isinstance(user_id, int):
             message.reply_text(
-                "I don't have that user in my db.  "
-                "You'll be able to interact with them if you reply to that person's message instead, or forward one of that user's messages."
+                "𝐈 𝐝𝐨𝐧'𝐭 𝐡𝐚𝐯𝐞 𝐭𝐡𝐚𝐭 𝐮𝐬𝐞𝐫 𝐢𝐧 𝐦𝐲 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞.  "
+                "𝐘𝐨𝐮'𝐥𝐥 𝐛𝐞 𝐚𝐛𝐥𝐞 𝐭𝐨 𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞𝐦 𝐢𝐟 𝐲𝐨𝐮 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐭𝐡𝐚𝐭 𝐩𝐞𝐫𝐬𝐨𝐧'𝐬 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐢𝐧𝐬𝐭𝐞𝐚𝐝, 𝐨𝐫 𝐟𝐨𝐫𝐰𝐚𝐫𝐝 𝐨𝐧𝐞 𝐨𝐟 𝐭𝐡𝐚𝐭 𝐮𝐬𝐞𝐫'𝐬 𝐦𝐞𝐬𝐬𝐚𝐠𝐞𝐬."
             )
             return None, None
 
@@ -151,12 +151,12 @@ def extract_unt_fedban(
             user_id, int
         ):
             message.reply_text(
-                "I don't seem to have interacted with this user before "
-                "please forward a message from them to give me control! "
-                "(like a voodoo doll, I need a piece of them to be able to execute certain commands...)"
+                "𝐈 𝐝𝐨𝐧'𝐭 𝐬𝐞𝐞𝐦 𝐭𝐨 𝐡𝐚𝐯𝐞 𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐞𝐝 𝐰𝐢𝐭𝐡 𝐭𝐡𝐢𝐬 𝐮𝐬𝐞𝐫 𝐛𝐞𝐟𝐨𝐫𝐞 - 𝐩𝐥𝐞𝐚𝐬𝐞 𝐟𝐨𝐫𝐰𝐚𝐫𝐝 𝐚 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐟𝐫𝐨𝐦 "
+                "𝐭𝐡𝐞𝐦 𝐭𝐨 𝐠𝐢𝐯𝐞 𝐦𝐞 𝐜𝐨𝐧𝐭𝐫𝐨𝐥! (𝐥𝐢𝐤𝐞 𝐚 𝐯𝐨𝐨𝐝𝐨𝐨 𝐝𝐨𝐥𝐥, 𝐈 𝐧𝐞𝐞𝐝 𝐚 𝐩𝐢𝐞𝐜𝐞 𝐨𝐟 𝐭𝐡𝐞𝐦 𝐭𝐨 𝐛𝐞 𝐚𝐛𝐥𝐞 "
+                "𝐭𝐨 𝐞𝐱𝐞𝐜𝐮𝐭𝐞 𝐜𝐞𝐫𝐭𝐚𝐢𝐧 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬...)"
             )
             return None, None
-        elif excp.message != "Chat not found":
+        elif excp.message != "𝗖𝗵𝗮𝘁 𝗻𝗼𝘁 𝗳𝗼𝘂𝗻𝗱":
             LOGGER.exception("Exception %s on user %s", excp.message, user_id)
             return None, None
         elif not isinstance(user_id, int):
