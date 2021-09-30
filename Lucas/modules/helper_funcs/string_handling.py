@@ -257,7 +257,7 @@ def extract_time(message, time_val):
         unit = time_val[-1]
         time_num = time_val[:-1]  # type: str
         if not time_num.isdigit():
-            message.reply_text("Invalid time amount specified.")
+            message.reply_text("𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐭𝐢𝐦𝐞 𝐚𝐦𝐨𝐮𝐧𝐭 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐞𝐝.")
             return ""
 
         if unit == "m":
@@ -272,7 +272,7 @@ def extract_time(message, time_val):
         return bantime
     else:
         message.reply_text(
-            "Invalid time type specified. Expected m,h, or d, got: {}".format(
+            "𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐭𝐢𝐦𝐞 𝐭𝐲𝐩𝐞 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐞𝐝. 𝐄𝐱𝐩𝐞𝐜𝐭𝐞𝐝 𝐦,𝐡, 𝐨𝐫 𝐝, 𝐠𝐨𝐭: {}".format(
                 time_val[-1]
             )
         )
