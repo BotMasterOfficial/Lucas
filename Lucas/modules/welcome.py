@@ -5,9 +5,9 @@ import time
 from functools import partial
 from contextlib import suppress
 
-import YoneRobot.modules.sql.welcome_sql as sql
-import YoneRobot
-from YoneRobot import (
+import Lucas.modules.sql.welcome_sql as sql
+import Lucas
+from Lucas import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -19,18 +19,18 @@ from YoneRobot import (
     dispatcher,
     JOIN_LOGGER
 )
-from YoneRobot.modules.helper_funcs.chat_status import (
+from Lucas.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from YoneRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from YoneRobot.modules.helper_funcs.msg_types import get_welcome_type
-from YoneRobot.modules.helper_funcs.string_handling import (
+from Lucas.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Lucas.modules.helper_funcs.msg_types import get_welcome_type
+from Lucas.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from YoneRobot.modules.log_channel import loggable
-from YoneRobot.modules.sql.global_bans_sql import is_user_gbanned
+from Lucas.modules.log_channel import loggable
+from Lucas.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -265,7 +265,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome yourself
             elif new_mem.id == bot.id:
                 creator = None
-                if not YoneRobot.ALLOW_CHATS:
+                if not Lucas.ALLOW_CHATS:
                     with suppress(BadRequest):
                          update.effective_message.reply_text(f"Groups are disabled for {bot.first_name}, I'm outta here.")
                     bot.leave_chat(update.effective_chat.id)
@@ -1144,7 +1144,7 @@ dispatcher.add_handler(CLEAN_SERVICE_HANDLER)
 dispatcher.add_handler(BUTTON_VERIFY_HANDLER)
 dispatcher.add_handler(WELCOME_MUTE_HELP)
 
-__mod_name__ = "Arrivals"
+__mod_name__ = "🙋‍♂️𝐖𝐞𝐥𝐜𝐨𝐦𝐞🙋‍♂️"
 __command_list__ = []
 __handlers__ = [
     NEW_MEM_HANDLER,
