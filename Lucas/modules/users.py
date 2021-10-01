@@ -11,10 +11,10 @@ from telegram.ext import (
     run_async,
 )
 
-import YoneRobot.modules.sql.users_sql as sql
-from YoneRobot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from YoneRobot.modules.helper_funcs.chat_status import dev_plus, sudo_plus
-from YoneRobot.modules.sql.users_sql import get_all_users
+import Lucas.modules.sql.users_sql as sql
+from Lucas import DEV_USERS, LOGGER, OWNER_ID, dispatcher
+from Lucas.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from Lucas.modules.sql.users_sql import get_all_users
 
 USERS_GROUP = 4
 CHAT_GROUP = 5
