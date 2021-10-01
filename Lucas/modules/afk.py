@@ -1,12 +1,12 @@
 import random, html
 
-from YoneRobot import dispatcher
-from YoneRobot.modules.disable import (
+from Lucas import dispatcher
+from Lucas.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from YoneRobot.modules.sql import afk_sql as sql
-from YoneRobot.modules.users import get_user_id
+from Lucas.modules.sql import afk_sql as sql
+from Lucas.modules.users import get_user_id
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters, MessageHandler, run_async
