@@ -5,9 +5,9 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from YoneRobot import DRAGONS, dispatcher
-from YoneRobot.modules.disable import DisableAbleCommandHandler
-from YoneRobot.modules.helper_funcs.chat_status import (
+from Lucas import DRAGONS, dispatcher
+from Lucas.modules.disable import DisableAbleCommandHandler
+from Lucas.modules.helper_funcs.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
@@ -15,19 +15,19 @@ from YoneRobot.modules.helper_funcs.chat_status import (
     user_admin,
     ADMIN_CACHE,
 )
-from YoneRobot.helper_extra.admin_rights import (
+from Lucas.helper_extra.admin_rights import (
     user_can_pin,
     user_can_promote,
     user_can_changeinfo,
 )
 
-from YoneRobot.modules.helper_funcs.extraction import (
+from Lucas.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from YoneRobot.modules.log_channel import loggable
-from YoneRobot.modules.helper_funcs.alternate import send_message
-from YoneRobot.modules.helper_funcs.alternate import typing_action
+from Lucas.modules.log_channel import loggable
+from Lucas.modules.helper_funcs.alternate import send_message
+from Lucas.modules.helper_funcs.alternate import typing_action
 
 
 @run_async
@@ -705,7 +705,7 @@ dispatcher.add_handler(SETCHAT_TITLE_HANDLER)
 dispatcher.add_handler(SETSTICKET_HANDLER)
 dispatcher.add_handler(SETDESC_HANDLER)
 
-__mod_name__ = "Admin"
+__mod_name__ = "🔱𝐀𝐝𝐦𝐢𝐧𝐬🔱"
 __command_list__ = [
     "adminlist",
     "admins",
