@@ -14,7 +14,7 @@ from pyrogram import filters
 from Lucas import BOT_ID
 from Lucas.helper_extra.aichat import add_chat, get_session, remove_chat
 from Lucas.pyrogramee.pluginshelper import admins_only, edit_or_reply
-from Lucas import pbot as Lucas
+from Lucas import pbot as lucas
 
 translator = google_translator()
 import requests
@@ -42,7 +42,7 @@ async def fetch(url):
 lucas_chats = []
 en_chats = []
 
-@Lucas.on_message(
+@lucas.on_message(
     filters.command("chatbot") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @admins_only
@@ -50,7 +50,7 @@ async def hmm(_, message):
     global lucas_chats
     if len(message.command) != 2:
         await message.reply_text(
-            "𝐈 𝐨𝐧𝐥𝐲 𝐫𝐞𝐜𝐨𝐠𝐧𝐢𝐳𝐞 `/chatbot on` and /chatbot `off only`"
+            "I only recognize `/chatbot on` and /chatbot `off only`"
         )
         message.continue_propagation()
     status = message.text.split(None, 1)[1]
@@ -59,28 +59,28 @@ async def hmm(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("𝐋𝐮𝐜𝐚𝐬 𝐀𝐈 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝 𝐈𝐧 𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭")
+            await lel.edit("lucas AI Already Activated In This Chat")
             return
         await lel.edit(
-            f"𝐋𝐮𝐜𝐚𝐬 𝐀𝐈 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐀𝐝𝐝𝐞𝐝 𝐅𝐨𝐫 𝐔𝐬𝐞𝐫𝐬 𝐈𝐧 𝐓𝐡𝐞 𝐂𝐡𝐚𝐭 {message.chat.id}"
+            f"lucas AI Successfully Added For Users In The Chat {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await edit_or_reply(message, "`Processing...`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
-            await lel.edit("𝐋𝐮𝐜𝐚𝐬 𝐀𝐈 𝐖𝐚𝐬 𝐍𝐨𝐭 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝 𝐈𝐧 𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭")
+            await lel.edit("lucas AI Was Not Activated In This Chat")
             return
         await lel.edit(
-            f"𝐋𝐮𝐜𝐚𝐬 𝐀𝐈 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐞𝐚𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝 𝐅𝐨𝐫 𝐔𝐬𝐞𝐫𝐬 𝐈𝐧 𝐓𝐡𝐞 𝐂𝐡𝐚𝐭 {message.chat.id}"
+            f"lucas AI Successfully Deactivated For Users In The Chat {message.chat.id}"
         )
 
     elif status == "EN" or status == "en" or status == "english":
         if not chat_id in en_chats:
             en_chats.append(chat_id)
-            await message.reply_text("𝐄𝐧𝐠𝐥𝐢𝐬𝐡 𝐀𝐈 𝐜𝐡𝐚𝐭 𝐄𝐧𝐚𝐛𝐥𝐞𝐝!")
+            await message.reply_text("English AI chat Enabled!")
             return
-        await message.reply_text("𝐀𝐈 𝐂𝐡𝐚𝐭 𝐈𝐬 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐃𝐢𝐬𝐚𝐛𝐥𝐞𝐝.")
+        await message.reply_text("AI Chat Is Already Disabled.")
         message.continue_propagation()
     else:
         await message.reply_text(
@@ -88,7 +88,7 @@ async def hmm(_, message):
         )
 
 
-@Lucas.on_message(
+@lucas.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
@@ -116,7 +116,7 @@ async def hmm(client, message):
         test = msg
         test = test.replace("lucas", "Aco")
         test = test.replace("lucas", "Aco")
-        URL = "https://api.affiliateplus.xyz/api/chatbot?message=hi&botname=@LucasOfficialBot&ownername=@mkspali"
+        URL = "https://api.affiliateplus.xyz/api/chatbot?message=hi&botname=@Lucas&ownername=@mkspai"
 
         try:
             r = requests.request("GET", url=URL)
@@ -130,7 +130,7 @@ async def hmm(client, message):
 
         pro = result["message"]
         try:
-            await Lucas.send_chat_action(message.chat.id, "typing")
+            await lucas.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
@@ -176,10 +176,10 @@ async def hmm(client, message):
                 return
         # test = emoji.demojize(test.strip())
 
-        # Kang with the credits bitches @mkspali
+        # Kang with the credits bitches @InukaASiTH
         test = test.replace("lucas", "Aco")
         test = test.replace("lucas", "Aco")
-        URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@LucasOfficialBot&ownername=@mkspali"
+        URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Lucas&ownername=@mkspali"
         try:
             r = requests.request("GET", url=URL)
         except:
@@ -196,13 +196,13 @@ async def hmm(client, message):
             except:
                 return
         try:
-            await Lucas.send_chat_action(message.chat.id, "typing")
+            await lucas.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
 
 
-@Lucas.on_message(
+@lucas.on_message(
     filters.text & filters.private & ~filters.edited & filters.reply & ~filters.bot
 )
 async def inuka(client, message):
@@ -250,10 +250,10 @@ async def inuka(client, message):
 
     # test = emoji.demojize(test.strip())
 
-    # Kang with the credits bitches @mkspali
+    # Kang with the credits bitches @InukaASiTH
     test = test.replace("lucas", "Aco")
     test = test.replace("lucas", "Aco")
-    URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@LucasOfficialBot&ownername=@mkspali"
+    URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Lucas&ownername=@mkspali"
     try:
         r = requests.request("GET", url=URL)
     except:
@@ -268,14 +268,14 @@ async def inuka(client, message):
     if not "en" in lan and not lan == "":
         pro = translator.translate(pro, lang_tgt=lan[0])
     try:
-        await Lucas.send_chat_action(message.chat.id, "typing")
+        await lucas.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
 
 
-@Lucas.on_message(
-    filters.regex("lucas|lucas|Lucas|Lucas|Lucas")
+@lucas.on_message(
+    filters.regex("lucas|lucas|lucas|lucas|lucas")
     & ~filters.bot
     & ~filters.via_bot
     & ~filters.forwarded
@@ -328,10 +328,10 @@ async def inuka(client, message):
 
     # test = emoji.demojize(test.strip())
 
-    # Kang with the credits bitches @mkspali
+    # Kang with the credits bitches @InukaASiTH
     test = test.replace("lucas", "Aco")
     test = test.replace("lucas", "Aco")
-    URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@LucasOfficialBot&ownername=@mkspali"
+    URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Lucas&ownername=@mkspali"
     try:
         r = requests.request("GET", url=URL)
     except:
@@ -348,18 +348,30 @@ async def inuka(client, message):
         except Exception:
             return
     try:
-        await Lucas.send_chat_action(message.chat.id, "typing")
+        await lucas.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
 
 
 __help__ = """
-𝐂𝐡𝐚𝐭𝐁𝐨𝐭
-𝐋𝐮𝐜𝐚𝐬 𝐀𝐈 𝟑.𝟎 𝐈𝐒 𝐓𝐡𝐞 𝐎𝐧𝐥𝐲 𝐀𝐈 𝐒𝐲𝐬𝐭𝐞𝐦 𝐖𝐡𝐢𝐜𝐡 𝐂𝐚𝐧 𝐃𝐞𝐭𝐞𝐜𝐭 & 𝐑𝐞𝐩𝐥𝐲 𝐔𝐩𝐭𝐨 𝟐𝟎𝟎 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞
- - /chatbot [ON/OFF]: 𝐄𝐧𝐚𝐛𝐥𝐞𝐬 𝐚𝐧𝐝 𝐝𝐢𝐬𝐚𝐛𝐥𝐞𝐬 𝐀𝐈 𝐂𝐡𝐚𝐭 𝐦𝐨𝐝𝐞 (𝐄𝐗𝐂𝐋𝐔𝐒𝐈𝐕𝐄)
- - /chatbot EN : 𝐄𝐧𝐚𝐛𝐥𝐞𝐬 𝐄𝐧𝐠𝐥𝐢𝐬𝐡 𝐨𝐧𝐥𝐲 𝐜𝐡𝐚𝐭𝐛𝐨𝐭
+<b> Chatbot </b>
+lucas AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
+ - /chatbot [ON/OFF]: Enables and disables AI Chat mode (EXCLUSIVE)
+ - /chatbot EN : Enables English only chatbot
  
 """
 
-__mod_name__ = "🗨️𝐂𝐡𝐚𝐭𝐁𝐨𝐭🗨️"
+__mod_name__ = "chatbot"
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
