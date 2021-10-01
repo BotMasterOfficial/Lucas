@@ -3,9 +3,9 @@ import re
 from typing import Optional
 
 import telegram
-from YoneRobot import TIGERS, WOLVES, dispatcher
-from YoneRobot.modules.disable import DisableAbleCommandHandler
-from YoneRobot.modules.helper_funcs.chat_status import (
+from Lucas import TIGERS, WOLVES, dispatcher
+from Lucas.modules.disable import DisableAbleCommandHandler
+from Lucas.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
@@ -14,16 +14,16 @@ from YoneRobot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     can_delete,
 )
-from YoneRobot.modules.helper_funcs.extraction import (
+from Lucas.modules.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from YoneRobot.modules.helper_funcs.filters import CustomFilters
-from YoneRobot.modules.helper_funcs.misc import split_message
-from YoneRobot.modules.helper_funcs.string_handling import split_quotes
-from YoneRobot.modules.log_channel import loggable
-from YoneRobot.modules.sql import warns_sql as sql
+from Lucas.modules.helper_funcs.filters import CustomFilters
+from Lucas.modules.helper_funcs.misc import split_message
+from Lucas.modules.helper_funcs.string_handling import split_quotes
+from Lucas.modules.log_channel import loggable
+from Lucas.modules.sql import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -45,7 +45,7 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from YoneRobot.modules.sql.approve_sql import is_approved
+from Lucas.modules.sql.approve_sql import is_approved
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
@@ -117,7 +117,7 @@ def warn(user: User,
     else:
         keyboard = InlineKeyboardMarkup([[
             InlineKeyboardButton(
-                "🔘 Remove warn", callback_data="rm_warn({})".format(user.id))
+                "🔘 𝐑𝐞𝐦𝐨𝐯𝐞 𝐰𝐚𝐫𝐧", callback_data="rm_warn({})".format(user.id))
         ]])
 
         reply = (
@@ -516,7 +516,7 @@ be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is
  ❍ /strongwarn <on/yes/off/no>*:* If set to on, exceeding the warn limit will result in a ban. Else, will just punch.
 """
 
-__mod_name__ = "Warns"
+__mod_name__ = "☣️𝐖𝐚𝐫𝐧𝐬☣️"
 
 WARN_HANDLER = CommandHandler(["warn", "dwarn"], warn_user, filters=Filters.group)
 RESET_WARN_HANDLER = CommandHandler(
