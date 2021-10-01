@@ -123,7 +123,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("YoneRobot.modules." + module_name)
+    imported_module = importlib.import_module("Lucas.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -353,7 +353,7 @@ def help_button(update, context):
 @run_async
 def yone_about_callback(update, context):
     query = update.callback_query
-    if query.data == "yone_":
+    if query.data == "Lucas_":
         query.message.edit_text(
             text=""" ℹ️ 𝐈 𝐚𝐦 *𝐋𝐮𝐜𝐚𝐬*, 𝐚 𝐩𝐨𝐰𝐞𝐫𝐟𝐮𝐥 𝐠𝐫𝐨𝐮𝐩 𝐦𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐛𝐨𝐭 𝐛𝐮𝐢𝐥𝐭 𝐭𝐨 𝐡𝐞𝐥𝐩 𝐲𝐨𝐮 𝐦𝐚𝐧𝐚𝐠𝐞 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐞𝐚𝐬𝐢𝐥𝐲.
                  \n⚫ 𝐈 𝐜𝐚𝐧 𝐫𝐞𝐬𝐭𝐫𝐢𝐜𝐭 𝐮𝐬𝐞𝐫𝐬.
