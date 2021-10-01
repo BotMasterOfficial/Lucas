@@ -176,7 +176,7 @@ async def hmm(client, message):
                 return
         # test = emoji.demojize(test.strip())
 
-        # Kang with the credits bitches @InukaASiTH
+        # Kang with the credits bitches @mkspali
         test = test.replace("lucas", "Aco")
         test = test.replace("lucas", "Aco")
         URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Lucas&ownername=@mkspali"
@@ -250,7 +250,7 @@ async def inuka(client, message):
 
     # test = emoji.demojize(test.strip())
 
-    # Kang with the credits bitches @InukaASiTH
+    # Kang with the credits bitches @mkspali
     test = test.replace("lucas", "Aco")
     test = test.replace("lucas", "Aco")
     URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Lucas&ownername=@mkspali"
@@ -328,7 +328,7 @@ async def inuka(client, message):
 
     # test = emoji.demojize(test.strip())
 
-    # Kang with the credits bitches @InukaASiTH
+    # Kang with the credits bitches @mkspali
     test = test.replace("lucas", "Aco")
     test = test.replace("lucas", "Aco")
     URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Lucas&ownername=@mkspali"
