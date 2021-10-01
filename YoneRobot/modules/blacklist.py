@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import YoneRobot.modules.sql.blacklist_sql as sql
-from YoneRobot import dispatcher, LOGGER
-from YoneRobot.modules.disable import DisableAbleCommandHandler
-from YoneRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from YoneRobot.modules.helper_funcs.extraction import extract_text
-from YoneRobot.modules.helper_funcs.misc import split_message
-from YoneRobot.modules.log_channel import loggable
-from YoneRobot.modules.warns import warn
-from YoneRobot.modules.helper_funcs.string_handling import extract_time
-from YoneRobot.modules.connection import connected
-from YoneRobot.modules.sql.approve_sql import is_approved
-from YoneRobot.modules.helper_funcs.alternate import send_message, typing_action
+import Lucas.modules.sql.blacklist_sql as sql
+from Lucas import dispatcher, LOGGER
+from Lucas.modules.disable import DisableAbleCommandHandler
+from Lucas.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from Lucas.modules.helper_funcs.extraction import extract_text
+from Lucas.modules.helper_funcs.misc import split_message
+from Lucas.modules.log_channel import loggable
+from Lucas.modules.warns import warn
+from Lucas.modules.helper_funcs.string_handling import extract_time
+from Lucas.modules.connection import connected
+from Lucas.modules.sql.approve_sql import is_approved
+from Lucas.modules.helper_funcs.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 

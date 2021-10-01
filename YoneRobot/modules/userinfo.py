@@ -13,7 +13,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from YoneRobot import (
+from Lucas import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -24,15 +24,15 @@ from YoneRobot import (
     dispatcher,
     sw,
 )
-from YoneRobot.__main__ import STATS, TOKEN, USER_INFO
-import YoneRobot.modules.sql.userinfo_sql as sql
-from YoneRobot.modules.disable import DisableAbleCommandHandler
-from YoneRobot.modules.sql.global_bans_sql import is_user_gbanned
-from YoneRobot.modules.sql.afk_sql import is_afk, check_afk_status
-from YoneRobot.modules.sql.users_sql import get_user_num_chats
-from YoneRobot.modules.helper_funcs.chat_status import sudo_plus
-from YoneRobot.modules.helper_funcs.extraction import extract_user
-from YoneRobot import telethn as YoneTelethonClient, TIGERS, DRAGONS, DEMONS
+from Lucas.__main__ import STATS, TOKEN, USER_INFO
+import Lucas.modules.sql.userinfo_sql as sql
+from Lucas.modules.disable import DisableAbleCommandHandler
+from Lucas.modules.sql.global_bans_sql import is_user_gbanned
+from Lucas.modules.sql.afk_sql import is_afk, check_afk_status
+from Lucas.modules.sql.users_sql import get_user_num_chats
+from Lucas.modules.helper_funcs.chat_status import sudo_plus
+from Lucas.modules.helper_funcs.extraction import extract_user
+from Lucas import telethn as LucasTelethonClient, TIGERS, DRAGONS, DEMONS
 
 
 def no_by_per(totalhp, percentage):
@@ -160,7 +160,7 @@ def get_id(update: Update, context: CallbackContext):
             )
 
 
-@YoneTelethonClient.on(
+@LucasTelethonClient.on(
     events.NewMessage(
         pattern="/ginfo ", from_users=(TIGERS or []) + (DRAGONS or []) + (DEMONS or [])
     )

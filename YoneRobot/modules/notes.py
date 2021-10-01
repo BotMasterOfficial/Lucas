@@ -3,14 +3,14 @@ from io import BytesIO
 import random
 from typing import Optional
 
-import YoneRobot.modules.sql.notes_sql as sql
-from YoneRobot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
-from YoneRobot.modules.disable import DisableAbleCommandHandler
-from YoneRobot.modules.helper_funcs.handlers import MessageHandlerChecker
-from YoneRobot.modules.helper_funcs.chat_status import user_admin, connection_status
-from YoneRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from YoneRobot.modules.helper_funcs.msg_types import get_note_type
-from YoneRobot.modules.helper_funcs.string_handling import (
+import Lucas.modules.sql.notes_sql as sql
+from Lucas import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
+from Lucas.modules.disable import DisableAbleCommandHandler
+from Lucas.modules.helper_funcs.handlers import MessageHandlerChecker
+from Lucas.modules.helper_funcs.chat_status import user_admin, connection_status
+from Lucas.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Lucas.modules.helper_funcs.msg_types import get_note_type
+from Lucas.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
 )
 from telegram import (

@@ -5,23 +5,23 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-import YoneRobot.modules.sql.notes_sql as sql
-from YoneRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
-from YoneRobot.__main__ import DATA_IMPORT
-from YoneRobot.modules.helper_funcs.chat_status import user_admin
-from YoneRobot.modules.helper_funcs.alternate import typing_action
+import Lucas.modules.sql.notes_sql as sql
+from Lucas import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
+from Lucas.__main__ import DATA_IMPORT
+from Lucas.modules.helper_funcs.chat_status import user_admin
+from Lucas.modules.helper_funcs.alternate import typing_action
 
-# from YoneRobot.modules.rules import get_rules
-import YoneRobot.modules.sql.rules_sql as rulessql
+# from Lucas.modules.rules import get_rules
+import Lucas.modules.sql.rules_sql as rulessql
 
-# from YoneRobot.modules.sql import warns_sql as warnssql
-import YoneRobot.modules.sql.blacklist_sql as blacklistsql
-from YoneRobot.modules.sql import disable_sql as disabledsql
+# from Lucas.modules.sql import warns_sql as warnssql
+import Lucas.modules.sql.blacklist_sql as blacklistsql
+from Lucas.modules.sql import disable_sql as disabledsql
 
-# from YoneRobot.modules.sql import cust_filters_sql as filtersql
-# import YoneRobot.modules.sql.welcome_sql as welcsql
-import YoneRobot.modules.sql.locks_sql as locksql
-from YoneRobot.modules.connection import connected
+# from Lucas.modules.sql import cust_filters_sql as filtersql
+# import Lucas.modules.sql.welcome_sql as welcsql
+import Lucas.modules.sql.locks_sql as locksql
+from Lucas.modules.connection import connected
 
 
 @run_async
@@ -325,7 +325,7 @@ def export_data(update, context):
         },
     }
     baccinfo = json.dumps(backup, indent=4)
-    with open("YoneRobot{}.backup".format(chat_id), "w") as f:
+    with open("Lucas{}.backup".format(chat_id), "w") as f:
         f.write(str(baccinfo))
     context.bot.sendChatAction(current_chat_id, "upload_document")
     tgl = time.strftime("%H:%M:%S - %d/%m/%Y", time.localtime(time.time()))
@@ -341,15 +341,15 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("YoneRobot{}.backup".format(chat_id), "rb"),
-        caption="💾*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `YoneRobot-Backup` was specially made for notes 📚.".format(
+        document=open("Lucas{}.backup".format(chat_id), "rb"),
+        caption="💾*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `Lucas-Backup` was specially made for notes 📚.".format(
             chat.title, chat_id, tgl
         ),
         timeout=360,
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("YoneRobot{}.backup".format(chat_id))  # Cleaning file
+    os.remove("Lucas{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data

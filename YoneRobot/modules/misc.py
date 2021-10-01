@@ -1,6 +1,6 @@
-from YoneRobot.modules.helper_funcs.chat_status import user_admin
-from YoneRobot.modules.disable import DisableAbleCommandHandler
-from YoneRobot import dispatcher
+from Lucas.modules.helper_funcs.chat_status import user_admin
+from Lucas.modules.disable import DisableAbleCommandHandler
+from Lucas import dispatcher
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import ParseMode, Update

@@ -1,9 +1,9 @@
 from time import sleep
 
-import YoneRobot.modules.sql.global_bans_sql as gban_sql
-import YoneRobot.modules.sql.users_sql as user_sql
-from YoneRobot import DEV_USERS, OWNER_ID, dispatcher
-from YoneRobot.modules.helper_funcs.chat_status import dev_plus
+import Lucas.modules.sql.global_bans_sql as gban_sql
+import Lucas.modules.sql.users_sql as user_sql
+from Lucas import DEV_USERS, OWNER_ID, dispatcher
+from Lucas.modules.helper_funcs.chat_status import dev_plus
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (
