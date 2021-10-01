@@ -1,11 +1,11 @@
 import html
-from YoneRobot.modules.disable import DisableAbleCommandHandler
-from YoneRobot import dispatcher, DRAGONS
-from YoneRobot.modules.helper_funcs.extraction import extract_user
+from Lucas.modules.disable import DisableAbleCommandHandler
+from Lucas import dispatcher, DRAGONS
+from Lucas.modules.helper_funcs.extraction import extract_user
 from telegram.ext import CallbackContext, CallbackQueryHandler, Filters, run_async
-import YoneRobot.modules.sql.approve_sql as sql
-from YoneRobot.modules.helper_funcs.chat_status import user_admin
-from YoneRobot.modules.log_channel import loggable
+import Lucas.modules.sql.approve_sql as sql
+from Lucas.modules.helper_funcs.chat_status import user_admin
+from Lucas.modules.log_channel import loggable
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Update
 from telegram.utils.helpers import mention_html
 from telegram.error import BadRequest
@@ -221,6 +221,6 @@ dispatcher.add_handler(APPROVAL)
 dispatcher.add_handler(UNAPPROVEALL)
 dispatcher.add_handler(UNAPPROVEALL_BTN)
 
-__mod_name__ = "Approvals"
+__mod_name__ = "☑️𝐀𝐩𝐩𝐫𝐨𝐯𝐞☑️"
 __command_list__ = ["approve", "unapprove", "approved", "approval"]
 __handlers__ = [APPROVE, DISAPPROVE, APPROVED, APPROVAL]
