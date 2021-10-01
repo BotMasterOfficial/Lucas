@@ -42,7 +42,7 @@ async def fetch(url):
 lucas_chats = []
 en_chats = []
 
-@Yone.on_message(
+@lucas.on_message(
     filters.command("chatbot") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @admins_only
