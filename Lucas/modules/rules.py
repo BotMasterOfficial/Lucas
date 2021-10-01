@@ -1,9 +1,9 @@
 from typing import Optional
 
-import YoneRobot.modules.sql.rules_sql as sql
-from YoneRobot import dispatcher
-from YoneRobot.modules.helper_funcs.chat_status import user_admin
-from YoneRobot.modules.helper_funcs.string_handling import markdown_parser
+import Lucas.modules.sql.rules_sql as sql
+from Lucas import dispatcher
+from Lucas.modules.helper_funcs.chat_status import user_admin
+from Lucas.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -125,7 +125,7 @@ __help__ = """
  ❍ /clearrules*:* clear the rules for this chat.
 """
 
-__mod_name__ = "Rules"
+__mod_name__ = "📝𝐑𝐮𝐥𝐞𝐬📝"
 
 GET_RULES_HANDLER = CommandHandler("rules", get_rules, filters=Filters.group)
 SET_RULES_HANDLER = CommandHandler("setrules", set_rules, filters=Filters.group)
