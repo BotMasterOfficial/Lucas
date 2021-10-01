@@ -12,9 +12,9 @@ from tswift import Song
 from youtube_dl import YoutubeDL
 from youtubesearchpython import SearchVideos
 
-from YoneRobot.conf import get_str_key
-from YoneRobot.pyrogramee.pluginshelper import get_text, progress
-from YoneRobot import pbot
+from Lucas.conf import get_str_key
+from Lucas.pyrogramee.pluginshelper import get_text, progress
+from Lucas import pbot
 
 GENIUS = get_str_key("GENIUS_API_TOKEN", None)
 
@@ -203,7 +203,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-# Lel, Didn't Get Time To Make New One So Used Plugin Made br @mrconfused and @sandy1709 dont edit credits
+# Lel, Didn't Get Time To Make New One So Used Plugin Made br @BotMasterOfficial and @mkspali dont edit credits
 
 
 @pbot.on_message(filters.command(["lyric", "lyrics"]))
