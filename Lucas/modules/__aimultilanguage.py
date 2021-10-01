@@ -88,7 +88,7 @@ async def hmm(_, message):
         )
 
 
-@Yone.on_message(
+@lucas.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
@@ -202,7 +202,7 @@ async def hmm(client, message):
             return
 
 
-@Yone.on_message(
+@lucas.on_message(
     filters.text & filters.private & ~filters.edited & filters.reply & ~filters.bot
 )
 async def inuka(client, message):
@@ -274,7 +274,7 @@ async def inuka(client, message):
         return
 
 
-@Yone.on_message(
+@lucas.on_message(
     filters.regex("lucas|lucas|lucas|lucas|lucas")
     & ~filters.bot
     & ~filters.via_bot
