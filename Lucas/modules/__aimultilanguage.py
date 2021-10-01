@@ -14,7 +14,7 @@ from pyrogram import filters
 from Lucas import BOT_ID
 from Lucas.helper_extra.aichat import add_chat, get_session, remove_chat
 from Lucas.pyrogramee.pluginshelper import admins_only, edit_or_reply
-from Lucas import pbot as Yone
+from Lucas import pbot as Lucas
 
 translator = google_translator()
 import requests
