@@ -42,7 +42,7 @@ async def fetch(url):
 lucas_chats = []
 en_chats = []
 
-@lucas.on_message(
+@Yone.on_message(
     filters.command("chatbot") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @admins_only
@@ -88,7 +88,7 @@ async def hmm(_, message):
         )
 
 
-@lucas.on_message(
+@Yone.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
@@ -202,7 +202,7 @@ async def hmm(client, message):
             return
 
 
-@lucas.on_message(
+@Yone.on_message(
     filters.text & filters.private & ~filters.edited & filters.reply & ~filters.bot
 )
 async def inuka(client, message):
@@ -274,7 +274,7 @@ async def inuka(client, message):
         return
 
 
-@lucas.on_message(
+@Yone.on_message(
     filters.regex("lucas|lucas|lucas|lucas|lucas")
     & ~filters.bot
     & ~filters.via_bot
