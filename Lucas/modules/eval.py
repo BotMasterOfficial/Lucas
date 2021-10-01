@@ -6,8 +6,8 @@ import textwrap
 import traceback
 from contextlib import redirect_stdout
 
-from YoneRobot import LOGGER, dispatcher
-from YoneRobot.modules.helper_funcs.chat_status import dev_plus
+from Lucas import LOGGER, dispatcher
+from Lucas.modules.helper_funcs.chat_status import dev_plus
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
@@ -76,7 +76,7 @@ def do(func, bot, update):
 
     os.chdir(os.getcwd())
     with open(
-        os.path.join(os.getcwd(), "YoneRobot/modules/helper_funcs/temp.txt"), "w"
+        os.path.join(os.getcwd(), "Lucas/modules/helper_funcs/temp.txt"), "w"
     ) as temp:
         temp.write(body)
 
