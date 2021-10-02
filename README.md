@@ -1,5 +1,5 @@
 <p align="center"><a href="https://github.com/BotMasterOfficial/Lucas"><img src="https://img.shields.io/badge/𝐋𝐮𝐜𝐚𝐬-gold?&style=flat-square?&logo=github" width=600px></a></p>
-<p align="center"><a href="https://github.com/BotMasterOfficial/Lucas"><img src="https://telegra.ph/file/192ccec6003f40da6a4a3.jpg"></a></p>
+<p align="center"><a href="https://github.com/BotMasterOfficial/Lucas"><img src="https://telegra.ph/file/8db76d7aa4f2aee630167.jpg"></a></p>
 
 #
 
