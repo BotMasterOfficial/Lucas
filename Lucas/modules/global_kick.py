@@ -5,7 +5,7 @@ from typing import List, Optional
 from telegram.error import BadRequest, TelegramError
 from telegram.ext import run_async, CommandHandler, MessageHandler, Filters
 from telegram.utils.helpers import mention_html
-from Lucas import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, STRICT_GBAN
+from Lucas import dispatcher, OWNER_ID, DEV_USERS, DRAGONS, STRICT_GBAN
 from Lucas.modules.helper_funcs.chat_status import user_admin, is_user_admin
 from Lucas.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from Lucas.modules.helper_funcs.filters import CustomFilters
@@ -46,8 +46,8 @@ def gkick(bot: Bot, update: Update, args: List[str]):
     if not user_id:
         message.reply_text("You do not seems to be referring to a user")
         return
-    if int(user_id) in SUDO_USERS or int(user_id) in SUPPORT_USERS:
-        message.reply_text("OHHH! Someone's trying to gkick a sudo/support user! *Grabs popcorn*")
+    if int(user_id) in DEV_USERS or int(user_id) in DRAGONS:
+        message.reply_text("OHHH! Someone's trying to gkick a dev/dragons user! *Grabs popcorn*")
         return
     if int(user_id) == OWNER_ID:
         message.reply_text("Wow! Someone's so noob that he want to gkick my owner! *Grabs Potato Chips*")
@@ -70,5 +70,5 @@ def gkick(bot: Bot, update: Update, args: List[str]):
             pass
 
 GKICK_HANDLER = CommandHandler("gkick", gkick, pass_args=True,
-                              filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
+                              filters=CustomFilters.dev_filter | CustomFilters.sudo_filter)
 dispatcher.add_handler(GKICK_HANDLER)                              
