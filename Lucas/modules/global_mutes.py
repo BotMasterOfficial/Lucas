@@ -8,7 +8,7 @@ from telegram.ext import run_async, CommandHandler, MessageHandler, Filters
 from telegram.utils.helpers import mention_html
 
 import Lucas.modules.sql.global_mutes_sql as sql
-from Lucas import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, STRICT_GMUTE
+from Lucas import dispatcher, OWNER_ID, DEV_USERS, DRAGONS, STRICT_GMUTE
 from Lucas.modules.helper_funcs.chat_status import user_admin, is_user_admin
 from Lucas.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from Lucas.modules.helper_funcs.filters import CustomFilters
@@ -28,12 +28,12 @@ def gmute(bot: Bot, update: Update, args: List[str]):
         message.reply_text("You don't seem to be referring to a user.")
         return
 
-    if int(user_id) in SUDO_USERS:
-        message.reply_text("I spy, with my little eye... a sudo user war! Why are you guys turning on each other?")
+    if int(user_id) in DEV_USERS:
+        message.reply_text("I spy, with my little eye... a dev user war! Why are you guys turning on each other?")
         return
 
-    if int(user_id) in SUPPORT_USERS:
-        message.reply_text("OOOH someone's trying to gmute a support user! *grabs popcorn*")
+    if int(user_id) in DRAGONS:
+        message.reply_text("OOOH someone's trying to gmute a dragons user! *grabs popcorn*")
         return
 
     if user_id == bot.id:
@@ -67,7 +67,7 @@ def gmute(bot: Bot, update: Update, args: List[str]):
     message.reply_text("*Gets duct tape ready* 😉")
 
     muter = update.effective_user  # type: Optional[User]
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
+    send_to_list(bot, DEV_USERS + DRAGONS,
                  "{} is gmuting user {} "
                  "because:\n{}".format(mention_html(muter.id, muter.first_name),
                                        mention_html(user_chat.id, user_chat.first_name), reason or "No reason given"),
@@ -110,13 +110,13 @@ def gmute(bot: Bot, update: Update, args: List[str]):
                 pass
             else:
                 message.reply_text("Could not gmute due to: {}".format(excp.message))
-                send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "Could not gmute due to: {}".format(excp.message))
+                send_to_list(bot, DEV_USERS + DRAGONS, "Could not gmute due to: {}".format(excp.message))
                 sql.ungmute_user(user_id)
                 return
         except TelegramError:
             pass
 
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "gmute complete!")
+    send_to_list(bot, DEV_USERS + DRAGONS, "gmute complete!")
     message.reply_text("Person has been gmuted.")
 
 
@@ -142,7 +142,7 @@ def ungmute(bot: Bot, update: Update, args: List[str]):
 
     message.reply_text("I'll let {} speak again, globally.".format(user_chat.first_name))
 
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
+    send_to_list(bot, DEV_USERS + DRAGONS,
                  "{} has ungmuted user {}".format(mention_html(muter.id, muter.first_name),
                                                    mention_html(user_chat.id, user_chat.first_name)),
                  html=True)
@@ -190,7 +190,7 @@ def ungmute(bot: Bot, update: Update, args: List[str]):
 
     sql.ungmute_user(user_id)
 
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "un-gmute complete!")
+    send_to_list(bot, DEV_USERS + DRAGONS, "un-gmute complete!")
 
     message.reply_text("Person has been un-gmuted.")
 
@@ -298,11 +298,11 @@ you and your groups by removing spam flooders as quickly as possible. They can b
 __mod_name__ = "Global Mute"
 
 GMUTE_HANDLER = CommandHandler("gmute", gmute, pass_args=True,
-                              filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
+                              filters=CustomFilters.dev_filter | CustomFilters.sudo_filter)
 UNGMUTE_HANDLER = CommandHandler("ungmute", ungmute, pass_args=True,
-                                filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
+                                filters=CustomFilters.dev_filter | CustomFilters.sudo_filter)
 GMUTE_LIST = CommandHandler("gmutelist", gmutelist,
-                           filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
+                           filters=CustomFilters.dev_filter | CustomFilters.sudo_filter)
 
 GMUTE_STATUS = CommandHandler("gmutestat", gmutestat, pass_args=True, filters=Filters.group)
 
