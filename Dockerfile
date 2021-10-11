@@ -65,7 +65,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/Lucas
-RUN git clone -b shiken https://github.com/noob-kittu/Lucas /root/Lucas
+RUN git clone -b shiken https://github.com/BotMasterOfficial/Lucas /root/Lucas
 WORKDIR /root/Lucas
 
 #Copy config file to /root/Lucas/Lucas
