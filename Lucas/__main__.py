@@ -96,6 +96,12 @@ buttons = [
     [
         InlineKeyboardButton(text="✪ ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ ✪", callback_data="help_back"),
     ],
+    [
+        InlineKeyboardButton(text="✪ Creator ✪", url=f"https://t.me/mkspali "),
+        InlineKeyboardButton(
+            text="✪ Updates ✪", url=f"https://t.me/BotMaster_mkspali"
+        ),
+    ],    
 ]
 
 
