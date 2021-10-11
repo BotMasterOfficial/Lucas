@@ -1,7 +1,8 @@
 import threading
 
-from Lucas.modules.sql import BASE, SESSION
-from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
+from sqlalchemy import Column, UnicodeText, Integer, String, Boolean
+
+from tg_bot.modules.sql import BASE, SESSION
 
 
 class GloballyBannedUsers(BASE):
@@ -19,7 +20,9 @@ class GloballyBannedUsers(BASE):
         return "<GBanned User {} ({})>".format(self.name, self.user_id)
 
     def to_dict(self):
-        return {"user_id": self.user_id, "name": self.name, "reason": self.reason}
+        return {"user_id": self.user_id,
+                "name": self.name,
+                "reason": self.reason}
 
 
 class GbanSettings(BASE):
@@ -144,9 +147,7 @@ def __load_gbanned_userid_list():
 def __load_gban_stat_list():
     global GBANSTAT_LIST
     try:
-        GBANSTAT_LIST = {
-            x.chat_id for x in SESSION.query(GbanSettings).all() if not x.setting
-        }
+        GBANSTAT_LIST = {x.chat_id for x in SESSION.query(GbanSettings).all() if not x.setting}
     finally:
         SESSION.close()
 
