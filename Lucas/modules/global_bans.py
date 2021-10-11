@@ -8,7 +8,7 @@ from telegram.ext import run_async, CommandHandler, MessageHandler, Filters
 from telegram.utils.helpers import mention_html
 
 import Lucas.modules.sql.global_bans_sql as sql
-from Lucas import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, STRICT_GBAN
+from Lucas import dispatcher, OWNER_ID, DEV_USERS, DRAGONS, STRICT_GBAN
 from Lucas.modules.helper_funcs.chat_status import user_admin, is_user_admin
 from Lucas.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from Lucas.modules.helper_funcs.filters import CustomFilters
@@ -53,12 +53,12 @@ def gban(bot: Bot, update: Update, args: List[str]):
         message.reply_text("You don't seem to be referring to a user.")
         return
 
-    if int(user_id) in SUDO_USERS:
-        message.reply_text("I spy, with my little eye... a sudo user war! Why are you guys turning on each other?")
+    if int(user_id) in DEV_USERS:
+        message.reply_text("I spy, with my little eye... a dev user war! Why are you guys turning on each other?")
         return
 
-    if int(user_id) in SUPPORT_USERS:
-        message.reply_text("OOOH someone's trying to gban a support user! *grabs popcorn*")
+    if int(user_id) in DRAGONS:
+        message.reply_text("OOOH someone's trying to gban a dragons user! *grabs popcorn*")
         return
 
     if user_id == bot.id:
@@ -94,7 +94,7 @@ def gban(bot: Bot, update: Update, args: List[str]):
     message.reply_text("⚡️ *ज्यादा लौंडाया नहीं चलेगी* ⚡️")
 
     banner = update.effective_user  # type: Optional[User]
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
+    send_to_list(bot, DEV_USERS + DRAGONS,
                  "<b>Global Ban</b>" \
                  "\n#GBAN" \
                  "\n<b>Status:</b> <code>Enforcing</code>" \
@@ -123,13 +123,13 @@ def gban(bot: Bot, update: Update, args: List[str]):
                 pass
             else:
                 message.reply_text("Could not gban due to: {}".format(excp.message))
-                send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "Could not gban due to: {}".format(excp.message))
+                send_to_list(bot, DEV_USERS + DRAGONS, "Could not gban due to: {}".format(excp.message))
                 sql.ungban_user(user_id)
                 return
         except TelegramError:
             pass
 
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, 
+    send_to_list(bot, DEV_USERS + DRAGONS, 
                   "{} has been successfully gbanned!".format(mention_html(user_chat.id, user_chat.first_name)),
                 html=True)
     message.reply_text("Person has been gbanned.")
@@ -157,7 +157,7 @@ def ungban(bot: Bot, update: Update, args: List[str]):
 
     message.reply_text("I pardon {}, globally with a second chance.".format(user_chat.first_name))
 
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
+    send_to_list(bot, DEV_USERS + DRAGONS,
                  "<b>Regression of Global Ban</b>" \
                  "\n#UNGBAN" \
                  "\n<b>Status:</b> <code>Ceased</code>" \
@@ -193,7 +193,7 @@ def ungban(bot: Bot, update: Update, args: List[str]):
 
     sql.ungban_user(user_id)
 
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, 
+    send_to_list(bot, DEV_USERS + DRAGONS, 
                   "{} has been pardoned from gban!".format(mention_html(user_chat.id, 
                                                                          user_chat.first_name)),
                   html=True)
@@ -309,11 +309,11 @@ you and your groups by removing spam flooders as quickly as possible. They can b
 __mod_name__ = "Global Ban"
 
 GBAN_HANDLER = CommandHandler("gban", gban, pass_args=True,
-                              filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
+                              filters=CustomFilters.dev_filter | CustomFilters.sudo_filter)
 UNGBAN_HANDLER = CommandHandler("ungban", ungban, pass_args=True,
-                                filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
+                                filters=CustomFilters.dev_filter | CustomFilters.sudo_filter)
 GBAN_LIST = CommandHandler("gbanlist", gbanlist,
-                           filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
+                           filters=CustomFilters.dev_filter | CustomFilters.sudo_filter)
 
 GBAN_STATUS = CommandHandler("gbanstat", gbanstat, pass_args=True, filters=Filters.group)
 
